@@ -7,6 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 //$routes->get('/', 'Home::index');
 
-// default routings
+// index route (redirection for login)
 $routes->get('/', 'Index::index');
 $routes->get('index', 'Index::index');
+
+//users route
+$routes->get('users', 'Users::index');
