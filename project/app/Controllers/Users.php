@@ -17,6 +17,28 @@ class Users extends BaseController{
             .view('users_view', $data);
 
     }
+
+    public function add(){
+        if($this->request->is('POST')){
+
+            $usersmodel = model('Users_model');
+
+            $registerdata = $this->request->getPost([
+                'name',
+                'birthdate',
+                'password',
+                'status',
+                'role',
+                'email',
+                'username'
+            ]);
+
+            $usersmodel->insert($registerdata);
+
+            return redirect()->to('/users');
+
+        }
+    }
 }
 
 ?>

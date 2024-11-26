@@ -13,3 +13,5 @@ $routes->get('index', 'Index::index');
 
 //users route
 $routes->get('users', 'Users::index');
+$routes->get('users/add', 'Users::add');
+$routes->post('users/add', 'Users::add');
