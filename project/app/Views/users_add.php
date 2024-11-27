@@ -7,8 +7,22 @@
             </div>
 
             <div class="form-group mb-2">
+                <label for="birthdate" class="form-label">Birthdate</label>
+                <input type="date" name="birthdate" id="birthdate" class="form-control">
+            </div>
+
+            <div class="form-group mb-2">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" id="email" class="form-control">
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="role" class="form-label">Role</label>
+                <select name="role" id="role" class="form-control">
+                    <option value="itso">ITSO</option>
+                    <option value="asssociate">Associate</option>
+                    <option value="student">Student</option>
+                </select>
             </div>
 
             <div class="form-group">
