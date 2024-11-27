@@ -108,3 +108,91 @@ in SYSTEMPATH\BaseModel.php on line 1011.
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 11:08:36 --> ErrorException: Undefined array key "fullname"
+[Method: GET, Route: users/edit/5]
+in APPPATH\Views\users_edit.php on line 6.
+ 1 APPPATH\Views\users_edit.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fullname"', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\users_edit.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\users_edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('users_edit', [], true)
+ 5 APPPATH\Controllers\Users.php(112): view('users_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 11:34:46 --> ErrorException: Undefined array key "fullname"
+[Method: GET, Route: users/view/5]
+in APPPATH\Views\users_idview.php on line 18.
+ 1 APPPATH\Views\users_idview.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "fullname"', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\users_idview.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\users_idview.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('users_idview', [], true)
+ 5 APPPATH\Controllers\Users.php(95): view('users_idview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Users->view('5')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 12:30:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "include\header.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include\\header.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('include\\header', [], true)
+ 3 APPPATH\Controllers\Index.php(43): view('include\\header', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 12:31:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "include\navbar.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('include\\navbar', [], true)
+ 3 APPPATH\Controllers\Index.php(44): view('include\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 12:31:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "include\navbar.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('include\\navbar', [], true)
+ 3 APPPATH\Controllers\Index.php(44): view('include\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 12:31:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "include\navbar.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('include\\navbar', [], true)
+ 3 APPPATH\Controllers\Index.php(44): view('include\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 12:31:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "include\navbar.php"
+[Method: GET, Route: login]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('include\\navbar', [], true)
+ 3 APPPATH\Controllers\Index.php(44): view('include\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->login()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

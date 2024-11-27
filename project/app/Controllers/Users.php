@@ -80,7 +80,50 @@ class Users extends BaseController{
         $updatedata['status'] = 1;
         $usersmodel->update($user['id'], $updatedata);
 
-        return redirect()->to('/'); //change this later
+        return redirect()->to('/'); //change this later, it should direct to login
+    }
+
+    public function view($id = 0){
+        $usersmodel = model('Users_model');
+
+        $data['title'] = "User Information";
+
+        $data['user'] = $usersmodel->where('id', $id)->first();
+
+        return view('include\header_itso', $data)
+        .view('include\navbar_itso')
+        .view('users_idview', $data)
+        .view('include\footer_itso');
+    }
+
+    public function edit($id = 0){
+        helper('form');
+
+        $usersmodel = model('Users_model');
+
+        if($this->request->is('POST')){
+
+            $updatedata = $this->request->getPost([
+                'name',
+                'birthdate',
+                'role',
+                'email',
+            ]);
+
+            $usersmodel->update($id, $updatedata);
+
+            return redirect()->to('users');
+
+        }
+
+        $data['title'] = "Edit User";
+
+        $data['user'] = $usersmodel->find($id);
+
+        return view('include\header_itso', $data)
+        .view('include\navbar_itso')
+        .view('users_edit', $data)
+        .view('include\footer_itso');
     }
 
     public function delete($id = 0){
