@@ -4,6 +4,10 @@ namespace App\Controllers;
 
 class Index extends BaseController{
     public function index(){
+        if(session()->has('isLogged')){
+            return redirect()->to('/');
+        }
+
         echo "hello gawin mo na project";
     }
 
@@ -15,7 +19,10 @@ class Index extends BaseController{
 
     // login function here
     public function login(){
-        helper('form');
+        if(!session()->has('isLogged')){
+            return redirect()->to('login');
+        }
+
         if($this->request->is('POST')){
             // Load model
             $usersmodel = model('Users_model');
@@ -27,12 +34,13 @@ class Index extends BaseController{
                 ->first();
             
             if(!$user){
-                // If no user found, display error message
+                session()->setFlashdata('error', 'Username and/or password in invalid.');
             }else{
                 if ($user['status'] != 1) {
                     echo "The account is not yet activated.";
                 } else {
                     // Redirects to home page if log in was successful
+                    session()->set('isLogged', true);
                     return redirect()->to('/');
                 }
             }
@@ -46,7 +54,6 @@ class Index extends BaseController{
     }
 
     public function resetpassword(){
-        helper('form');
         if($this->request->is('POST')){
             // Load model
             $usersmodel = model('Users_model');
@@ -54,23 +61,25 @@ class Index extends BaseController{
             $userreset = $this->request->getPost(['username']);
             // Set filter then query from tblusers
             $user  = $usersmodel->where('username', $userreset['username'])->first();
-
-            $resetpassword['resetcode'] = uniqid();
-
-                $usersmodel->update($user['id'], $resetpassword);
             
             if(!$user){
-                // If no user found, display error message
+                session()->setFlashdata('error', "Username doesn't exist.");
+
+                return redirect()->to('login');
             }else{
+                $resetpassword['resetcode'] = uniqid();
+
+                $usersmodel->update($user['id'], $resetpassword);
+                
                 $email = service('email');
                 $email->setTo($user['email']);
                 $message = "Hello, " . $user['name'] . "!\n\nYou have requested to reset your password.
-                Please <a href='". base_url('reset/'.$user['resetcode']) ."'>
+                Please <a href='". base_url('reset/'.$resetpassword['resetcode']) ."'>
                 click this link</a> to reset your password.<br><br> <b>From Forknik University</b>";
                 $email->setMessage($message);
                 if(!$email->send()){
-                print_r($email->printDebugger());
-            }
+                    print_r($email->printDebugger());
+                }
 
                 return redirect()->to('login');
             }
@@ -78,7 +87,6 @@ class Index extends BaseController{
     }
 
     public function reset($resetcode){
-        helper('form');
         if($this->request->is('POST')){
             // Load model
             $usersmodel = model('Users_model');
@@ -88,7 +96,7 @@ class Index extends BaseController{
             $user  = $usersmodel->where('resetcode', $resetcode)->first();
             
             if(!$user){
-                // If no user found, display error message
+                echo $resetcode;
             }else{
                 $resetpassword['password'] = $userreset['newpass'];
 
@@ -98,11 +106,18 @@ class Index extends BaseController{
             }
         }
 
+        $data['resetcode'] = $resetcode;
+
         $data['title'] = "New Password";
 
         return view('include\header', $data)
-            .view('reset_view')
+            .view('reset_view', $data)
             .view('include\footer');
+    }
+
+    public function logout(){
+        session()->destroy();
+        return redirect()->to('login');
     }
 }
 
