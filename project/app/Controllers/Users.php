@@ -32,18 +32,34 @@ class Users extends BaseController{
                 'email',
             ]);
 
+            //generate username format YYYY00001
             $lastUser = $usersmodel->orderBy('id', 'DESC')->first();
             $lastId = $lastUser ? $lastUser['id'] : 0;
             $newId = str_pad($lastId + 1, 5, '0', STR_PAD_LEFT);
             $registerdata['username'] = date('Y') . $newId;
 
+            //generate password from birthdate as default
             $defaultpass = $this->request->getPost([
                 'birthdate'
             ]);
-
             $registerdata['password'] = $defaultpass['birthdate'];
 
+            $registerdata['activationcode'] = uniqid();
+
             $usersmodel->insert($registerdata);
+
+            // sending the activation code to the user
+            $email = service('email');
+            $email->setTo($registerdata['email']);
+            $message = "Hello, " . $registerdata['name'] . "!\n\nCongratulations, you are now part of Forknik University.
+            Please <a href='". base_url('users/activate/'.$registerdata['activationcode']) ."'>
+            click this activation link</a> to activate your account.<br><br> <b>From Forknik University</b>";
+            $email->setMessage($message);
+            if(!$email->send()){
+                print_r($email->printDebugger());
+            }
+
+
 
             return redirect()->to('/users');
 
@@ -52,11 +68,19 @@ class Users extends BaseController{
         $data['title'] = "Add User";
 
 
-
         return view('include\header_itso', $data)
         .view('include\navbar_itso')
         .view('users_add')
         .view('include\footer_itso');
+    }
+
+    public function activate($activationcode){
+        $usersmodel = model('Users_model');
+        $user = $usersmodel->where('activationcode', $activationcode)->first();
+        $updatedata['status'] = 1;
+        $usersmodel->update($user['id'], $updatedata);
+
+        return redirect()->to('/'); //change this later
     }
 
     public function delete($id = 0){

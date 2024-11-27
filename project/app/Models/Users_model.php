@@ -20,6 +20,7 @@ class Users_model extends Model{
         'role', //ITSO, associate or student
         'email',
         'username',
+        'activationcode',
         'datecreated'
     ];
 
