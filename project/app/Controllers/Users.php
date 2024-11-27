@@ -80,7 +80,7 @@ class Users extends BaseController{
         $updatedata['status'] = 1;
         $usersmodel->update($user['id'], $updatedata);
 
-        return redirect()->to('/'); //change this later, it should direct to login
+        return redirect()->to('login'); //change this later, it should direct to login
     }
 
     public function view($id = 0){

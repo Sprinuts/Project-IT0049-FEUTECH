@@ -25,4 +25,8 @@ $routes->get('users/view/(:num)', 'Users::view/$1'); //view user
 $routes->get('login', 'Index::login'); //login page
 $routes->post('login', 'Index::login'); //login page by post
 
-
+//reset password route
+$routes->get('resetpassword', 'Index::resetpassword'); //reset password page
+$routes->post('resetpassword', 'Index::resetpassword'); //reset password page by post
+$routes->get('reset/(:any)', 'Index::reset/$1'); //reset password page by post
+$routes->post('reset/(:any)', 'Index::reset/$1'); //reset password page by post

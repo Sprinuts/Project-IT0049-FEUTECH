@@ -21,7 +21,8 @@ class Users_model extends Model{
         'email',
         'username',
         'activationcode',
-        'datecreated'
+        'datecreated',
+        'resetcode',
     ];
 
 

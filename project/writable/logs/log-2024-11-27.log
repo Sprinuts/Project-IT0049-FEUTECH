@@ -196,3 +196,53 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 14:06:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "resetpassword_view.php"
+[Method: POST, Route: resetpassword]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('resetpassword_view.php')
+ 2 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('resetpassword_view', [], true)
+ 3 APPPATH\Controllers\Index.php(83): view('resetpassword_view')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->resetpassword()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 14:17:47 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: resetpassword]
+in APPPATH\Controllers\Index.php on line 60.
+ 1 APPPATH\Controllers\Index.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Controllers\\Index.php', 60)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->resetpassword()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 14:21:43 --> ErrorException: Undefined variable $reset_code
+[Method: GET, Route: reset/6747288908d8f]
+in APPPATH\Views\reset_view.php on line 3.
+ 1 APPPATH\Views\reset_view.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reset_code', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\reset_view.php', 3)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\reset_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('reset_view', [], true)
+ 5 APPPATH\Controllers\Index.php(104): view('reset_view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->reset('6747288908d8f')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-27 14:21:45 --> ErrorException: Undefined variable $reset_code
+[Method: GET, Route: reset/6747288908d8f]
+in APPPATH\Views\reset_view.php on line 3.
+ 1 APPPATH\Views\reset_view.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reset_code', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\reset_view.php', 3)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\Project\\app\\Views\\reset_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('reset_view', [], true)
+ 5 APPPATH\Controllers\Index.php(104): view('reset_view')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Index->reset('6747288908d8f')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Index))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

@@ -3,14 +3,14 @@
 
 <div class="container" id="container">
         <div class="form-container sign-up">
-            <form action="<?= base_url('index/resetpass');  ?>" class="sign-up-form" method="POST" id="sign-up-form">
+            <form action="<?= base_url('resetpassword');  ?>" class="sign-up-form" method="POST" id="sign-up-form">
                 <h1>Reset Password</h1>
                 <input type="text" name="username" id="username" placeholder="Username">
-                <button type="submit" id="sign-up-btn">Sign Up</button>
+                <button type="submit" id="sign-up-btn">Reset Password</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form action="<?= base_url('index/login'); ?>" method="POST">
+            <form action="<?= base_url('login'); ?>" method="POST">
                 <h1>Log In</h1>
                 <input type="text" name="username" id="username" placeholder="Username">
                 <input type="password" name="password" id="password" placeholder="Password">
@@ -27,7 +27,7 @@
                 <div class="toggle-panel toggle-right">
                     <h1>Welcome Back!</h1>
                     <p>Forgot your password?</p>
-                    <button class="hidden" id="register">Sign Up</button>
+                    <button class="hidden" id="register">Reset Password</button>
                 </div>
             </div>
         </div>
