@@ -4,11 +4,17 @@ namespace App\Controllers;
 
 class Index extends BaseController{
     public function index(){
-        if(session()->has('isLogged')){
-            return redirect()->to('/');
+        if(!session()->has('isLogged')){
+            return redirect()->to('login');
         }
 
         echo "hello gawin mo na project";
+
+        $data['title'] = "Welcome to Forknik University";
+
+        return view('include\header', $data)
+            .view('include\navbar_itso')
+            .view('include\footer');
     }
 
     // add index function here for itso welcome page
@@ -19,9 +25,10 @@ class Index extends BaseController{
 
     // login function here
     public function login(){
-        if(!session()->has('isLogged')){
-            return redirect()->to('login');
+        if(session()->has('isLogged')){
+            return redirect()->to('/');
         }
+
 
         if($this->request->is('POST')){
             // Load model
