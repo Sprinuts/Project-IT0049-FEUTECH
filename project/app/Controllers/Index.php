@@ -18,6 +18,19 @@ class Index extends BaseController{
     }
 
     // add index function here for itso welcome page
+    public function welcome(){
+        if(!session()->has('isLogged')){
+            return redirect()->to('login');
+        }
+
+        echo "hello gawin mo na project";
+
+        $data['title'] = "Welcome to Forknik University";
+
+        return view('include\header', $data)
+            .view('include\navbar_itso')
+            .view('include\footer');
+    }
 
     // add index function here for associate welcome page
 
