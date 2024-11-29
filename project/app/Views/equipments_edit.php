@@ -5,15 +5,15 @@
                 <p><?= validation_list_errors(); ?></p>
             </div>
         <?php endif ?>
-        <form action="<?= base_url('equipments/add'); ?>" method="post" class="adjust">
+        <form action="<?= base_url('equipments/edit/'.$equipment['id']); ?>" method="post" class="adjust">
             <div class="form-group mb-2">
                 <label for="equipmentname" class="form-label">Equipment Name</label>
-                <input type="text" name="equipmentname" id="equipmentname" class="form-control" value="<?= set_value('equipmentname')?>">
+                <input type="text" name="equipmentname" id="equipmentname" class="form-control" value="<?= $equipment['equipmentname']; ?>">
             </div>
 
             <div class="form-group mb-2">
                 <label for="category" class="form-label">Category</label>
-                <select name="category" id="category" class="form-control" onchange="updateAccessories()">
+                <select name="category" id="category" class="form-control" onchange="updateAccessories()" value="<?= $equipment['category']; ?>">
                     <option value="" disabled selected>Select Category</option>
                     <option value="laptop" <?= set_value('category') == 'laptop' ? 'selected' : '' ?>>Laptop</option>
                     <option value="dlp" <?= set_value('category') == 'dlp' ? 'selected' : '' ?>>DLP</option>
@@ -44,18 +44,14 @@
                     </optgroup>
                 </select>
             </div>
-
             <div class="form-group mb-2">
-                <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" class="form-control" rows="3"><?= set_value('description')?></textarea>
+                <label for="birthdate" class="form-label">Birthdate</label>
+                <input type="date" name="birthdate" id="birthdate" class="form-control" value="<?= date('Y-m-d', strtotime($equipment['birthdate'])); ?>">
             </div>
-
             <div class="form-group">
-                <button type="submit" class="btn btn-success">Add Equipment</button>
-                <a href="<?= base_url('equipments'); ?>" class="btn btn-danger ms-2">Cancel</a>
+                <button type="submit" class="btn btn-success">Save Changes</button>
+                <a href="<?= base_url('equipments'); ?>" class="btn btn-danger">Cancel</a>
             </div>
         </form>
     </div>
 </div>
-
-<script src="<?= base_url('public/javascript/equipmentadd_js.js'); ?>"></script>

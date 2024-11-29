@@ -97,8 +97,6 @@ class Users extends BaseController{
                 print_r($email->printDebugger());
             }
 
-
-
             return redirect()->to('/users');
 
         }

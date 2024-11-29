@@ -9,7 +9,7 @@ class Equipments extends BaseController{
 
         $data['equipments'] = $equipmentsmodel->get()->getResult();
 
-        $data['title'] = "List of Users";
+        $data['title'] = "List of Equipments";
 
         return view('include\header_itso', $data)
             .view('include\navbar_itso')
@@ -27,39 +27,53 @@ class Equipments extends BaseController{
 
             $registerdata = $this->request->getPost([
                 'equipmentname',
+                'category',
+                'accessories',
                 'description',
-                'quantity',
-                'status',
             ]);
 
             $rules = [
-                'name' => 'required',
+                'equipmentname' => 'required',
+                'category' => 'required',
+                'accessories' => 'required',
                 'description' => 'required',
-                'quantity' => 'required',
-                'status' => 'required',
             ];
 
             $messages = [
-                'name' => [
-                    'required' => 'Name is required.'
+                'equipmentname' => [
+                    'required' => 'Equipment name is required.'
+                ],
+                'category' => [
+                    'required' => 'Category is required.'
+                ],
+                'accessories' => [
+                    'required' => 'Accessories are required.'
                 ],
                 'description' => [
                     'required' => 'Description is required.'
                 ],
-                'quantity' => [
-                    'required' => 'Quantity is required.'
-                ],
-                'status' => [
-                    'required' => 'Status is required.'
-                ],
             ];
 
-            if(!$this->validate($rules, $messages)){
-                $data['validation'] = $this->validator;
-            } else {
-                $equipmentsmodel->save($registerdata);
-                return redirect()->to('equipments');
+            if(!$this->validateData($registerdata ,$rules, $messages)){
+                //reload the page with errors
+
+                $data['title'] = "Add Equipment";
+
+                return view('include\header_itso', $data)
+                    .view('include\navbar_itso')
+                    .view('equipments_add')
+                    .view('include\footer_itso');
+
             }
+
+            $lastEquipment = $equipmentsmodel->orderBy('id', 'DESC')->first();
+            $lastId = $lastEquipment ? $lastEquipment['id'] : 0;
+            $newId = str_pad($lastId + 1, 8, '0', STR_PAD_LEFT);
+            $registerdata['equipmentid'] = "CCS{$newId}";
+
+            $equipmentsmodel->insert($registerdata);
+
+            return redirect()->to('equipments');
         }
 
         $data['title'] = "Add Equipment";
@@ -68,5 +82,12 @@ class Equipments extends BaseController{
             .view('include\navbar_itso')
             .view('equipments_add')
             .view('include\footer_itso');
+    }
+
+    public function delete($id = 0){
+
+        $equipmentmodel = model('Equipments_model');
+        $equipmentmodel->delete($id);
+        return redirect()->to('equipments');
     }
 }

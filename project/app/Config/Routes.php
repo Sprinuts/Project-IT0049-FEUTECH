@@ -38,3 +38,7 @@ $routes->post('(?i)reset/(:any)', 'Index::reset/$1'); //reset password page by p
 //equipment route
 $routes->get('(?i)equipments', 'Equipments::index'); //list of equipment 
 $routes->get('(?i)equipments/add', 'Equipments::add'); //add new equipment direct
+$routes->post('(?i)equipments/add', 'Equipments::add'); //add new equipment by post
+$routes->get('(?i)equipments/delete/(:num)', 'Equipments::delete/$1'); //delete equipment
+$routes->get('(?i)equipments/edit/(:num)', 'Equipments::edit/$1'); //edit equipment
+$routes->post('(?i)equipments/edit/(:num)', 'Equipments::edit/$1'); //edit equipment by post
