@@ -37,3 +37,4 @@ $routes->post('(?i)reset/(:any)', 'Index::reset/$1'); //reset password page by p
 
 //equipment route
 $routes->get('(?i)equipments', 'Equipments::index'); //list of equipment 
+$routes->get('(?i)equipments/add', 'Equipments::add'); //add new equipment direct

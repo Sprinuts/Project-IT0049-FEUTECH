@@ -4,7 +4,15 @@ namespace App\Controllers;
 
 class Index extends BaseController{
     public function index(){
-        if(!session()->has('isLogged')){
+        if(session()->has('isLogged')){
+            if(session()->get('role') == 'itso'){
+                return redirect()->to('welcomeitso');
+            } else if(session()->get('role') == 'associate'){
+                return redirect()->to('welcome');
+            } else if(session()->get('role') == 'student'){
+                return redirect()->to('welcome');
+            }
+        } else {
             return redirect()->to('login');
         }
 
@@ -19,9 +27,7 @@ class Index extends BaseController{
 
     // add index function here for itso welcome page
     public function welcomeitso(){
-        if(!session()->has('isLogged')){
-            return redirect()->to('login');
-        } else {
+        if(session()->has('isLogged')){
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
@@ -29,6 +35,8 @@ class Index extends BaseController{
             } else if(session()->get('role') == 'student'){
                 return redirect()->to('welcome');
             }
+        } else {
+            return redirect()->to('login');
         }
 
         $data['title'] = "Welcome to Forknik University";
@@ -41,9 +49,7 @@ class Index extends BaseController{
 
     // add index function here for associate welcome page
     public function welcomeassociate(){
-        if(!session()->has('isLogged')){
-            return redirect()->to('login');
-        } else {
+        if(session()->has('isLogged')){
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
@@ -51,6 +57,8 @@ class Index extends BaseController{
             } else if(session()->get('role') == 'student'){
                 return redirect()->to('welcome');
             }
+        } else {
+            return redirect()->to('login');
         }
 
         $data['title'] = "Welcome to Forknik University";
@@ -63,9 +71,7 @@ class Index extends BaseController{
 
     // add index function here for student welcome page
     public function welcomestudent(){
-        if(!session()->has('isLogged')){
-            return redirect()->to('login');
-        } else {
+        if(session()->has('isLogged')){
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
@@ -73,6 +79,8 @@ class Index extends BaseController{
             } else if(session()->get('role') == 'student'){
                 return redirect()->to('welcome');
             }
+        } else {
+            return redirect()->to('login');
         }
 
         $data['title'] = "Welcome to Forknik University";
@@ -115,7 +123,13 @@ class Index extends BaseController{
                     // Redirects to home page if log in was successful
                     session()->set('isLogged', true);
                     session()->set('role', $user['role']);
-                    return redirect()->to('/');
+                    if($user['role'] == 'itso'){
+                        return redirect()->to('welcomeitso');   
+                    } else if($user['role'] == 'associate'){
+                        return redirect()->to('welcome');
+                    } else if($user['role'] == 'student'){
+                        return redirect()->to('welcome');
+                    }
                 }
             }
         }
@@ -162,6 +176,8 @@ class Index extends BaseController{
     }
 
     public function reset($resetcode){
+        helper('form');
+
         if($this->request->is('POST')){
             // Load model
             $usersmodel = model('Users_model');
