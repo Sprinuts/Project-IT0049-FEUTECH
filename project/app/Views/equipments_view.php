@@ -1,7 +1,7 @@
 <div>
     <h3 class="text-center">List of Equiment</h3>
     <div class="adjust">
-        <a href="<?= base_url('equipment/add'); ?>" class="btn btn-lg btn-success adjustBtn">Add New Equipment</a>
+        <a href="<?= base_url('equipments/add'); ?>" class="btn btn-lg btn-success adjustBtn">Add New Equipment</a>
         <table class="adjustBtn table table-striped table-hover table-light table-bordered table-responsive">
             <thead>
                 <tr>

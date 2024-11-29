@@ -23,6 +23,7 @@ class Equipments_model extends Model{
         'datereserved',
         'status',
         'category',
+        'description',
     ];
 
 
