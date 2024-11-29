@@ -43,3 +43,6 @@ $routes->get('(?i)equipments/delete/(:num)', 'Equipments::delete/$1'); //delete 
 $routes->get('(?i)equipments/edit/(:num)', 'Equipments::edit/$1'); //edit equipment
 $routes->post('(?i)equipments/edit/(:num)', 'Equipments::edit/$1'); //edit equipment by post
 $routes->get('(?i)equipments/view/(:num)', 'Equipments::view/$1'); //view equipment
+
+//borrow route
+$routes->get('(?i)borrow', 'Borrow::index'); //borrow equipment

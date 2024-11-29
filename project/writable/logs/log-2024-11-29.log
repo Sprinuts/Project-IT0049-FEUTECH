@@ -930,3 +930,46 @@ in APPPATH\Views\equipmentsid_view.php on line 30.
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 INFO - 2024-11-29 21:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 21:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 21:42:21 --> ErrorException: Undefined variable $equipmentsmodel
+[Method: GET, Route: borrow]
+in APPPATH\Views\borrow_view.php on line 11.
+ 1 APPPATH\Views\borrow_view.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $equipmentsmodel', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\borrow_view.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\borrow_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('borrow_view', [], true)
+ 5 APPPATH\Controllers\Borrow.php(17): view('borrow_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Borrow->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Borrow))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 21:51:36 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: borrow]
+in APPPATH\Views\borrow_view.php on line 10.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('borrow_view', [], true)
+ 4 APPPATH\Controllers\Borrow.php(17): view('borrow_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Borrow->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Borrow))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 21:51:55 --> ErrorException: Undefined variable $laptopcount
+[Method: GET, Route: borrow]
+in APPPATH\Views\borrow_view.php on line 10.
+ 1 APPPATH\Views\borrow_view.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $laptopcount', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\borrow_view.php', 10)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\borrow_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('borrow_view', [], true)
+ 5 APPPATH\Controllers\Borrow.php(17): view('borrow_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Borrow->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Borrow))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-29 21:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 21:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
