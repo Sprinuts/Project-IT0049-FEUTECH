@@ -21,7 +21,14 @@ class Index extends BaseController{
     public function welcomeitso(){
         if(!session()->has('isLogged')){
             return redirect()->to('login');
-            
+        } else {
+            if(session()->get('role') == 'itso'){
+                return redirect()->to('welcomeitso');
+            } else if(session()->get('role') == 'associate'){
+                return redirect()->to('welcome');
+            } else if(session()->get('role') == 'student'){
+                return redirect()->to('welcome');
+            }
         }
 
         $data['title'] = "Welcome to Forknik University";
@@ -33,8 +40,48 @@ class Index extends BaseController{
     }
 
     // add index function here for associate welcome page
+    public function welcomeassociate(){
+        if(!session()->has('isLogged')){
+            return redirect()->to('login');
+        } else {
+            if(session()->get('role') == 'itso'){
+                return redirect()->to('welcomeitso');
+            } else if(session()->get('role') == 'associate'){
+                return redirect()->to('welcome');
+            } else if(session()->get('role') == 'student'){
+                return redirect()->to('welcome');
+            }
+        }
+
+        $data['title'] = "Welcome to Forknik University";
+
+        return view('include\header', $data)
+            .view('include\navbar_itso')
+            .view('welcomeitso_view')
+            .view('include\footer');
+    }
 
     // add index function here for student welcome page
+    public function welcomestudent(){
+        if(!session()->has('isLogged')){
+            return redirect()->to('login');
+        } else {
+            if(session()->get('role') == 'itso'){
+                return redirect()->to('welcomeitso');
+            } else if(session()->get('role') == 'associate'){
+                return redirect()->to('welcome');
+            } else if(session()->get('role') == 'student'){
+                return redirect()->to('welcome');
+            }
+        }
+
+        $data['title'] = "Welcome to Forknik University";
+
+        return view('include\header', $data)
+            .view('include\navbar_itso')
+            .view('welcomeitso_view')
+            .view('include\footer');
+    }
 
     // login function here
     public function login(){
@@ -61,7 +108,7 @@ class Index extends BaseController{
             
             if(!$user){
                 session()->setFlashdata('error', 'Username and/or password in invalid.');
-            }else{
+            } else{
                 if ($user['status'] != 1) {
                     echo "The account is not yet activated.";
                 } else {
