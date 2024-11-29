@@ -7,7 +7,10 @@ class Users extends BaseController{
         
         $usersmodel = model('Users_model');
 
-        $data['users'] = $usersmodel->get()->getResult();
+        //$data['users'] = $usersmodel->get()->getResult();
+        $data['users'] = $usersmodel->paginate(2); //increase this if not testing
+        $data['pager'] = $usersmodel->pager;
+
 
         $data['title'] = "List of Users";
 
@@ -31,6 +34,41 @@ class Users extends BaseController{
                 'role',
                 'email',
             ]);
+
+            $rules = [
+                'name' => 'required',
+                'birthdate' => 'required',
+                'role' => 'required',
+                'email' => 'required|valid_email',
+            ];
+
+            $messages = [
+                'name' => [
+                    'required' => 'Fullname is required.'
+                ],
+                'birthdate' => [
+                    'required' => 'Birthdate is required.'
+                ],
+                'role' => [
+                    'required' => 'Role is required.'
+                ],
+                'email' => [
+                    'required' => 'Email is required.',
+                    'valid_email' => 'Email is invalid.'
+                ],
+            ];
+
+            if(!$this->validateData($registerdata ,$rules, $messages)){
+                //reload the page with errors
+                
+                $data['title'] = "Add User";
+
+                return view('include\header_itso', $data)
+                    .view('include\navbar_itso')
+                    .view('users_add')
+                    .view('include\footer_itso');
+
+            }
 
             //generate username format YYYY00001
             $lastUser = $usersmodel->orderBy('id', 'DESC')->first();

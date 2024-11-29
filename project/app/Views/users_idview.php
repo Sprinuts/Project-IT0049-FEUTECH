@@ -14,7 +14,7 @@
                 <input type="email" name="email" id="email" class="form-control" value="<?= $user['email']; ?>" readonly>
             </div>
             <div class="form-group mb-2">
-                <label for="name" class="form-label">Fullname</label>
+                <label for="name" class="form-label">Full Name</label>
                 <input type="text" name="name" id="name" class="form-control" value="<?= $user['name']; ?>" readonly>
             </div>
             <div class="form-group mb-2">
