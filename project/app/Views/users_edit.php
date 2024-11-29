@@ -1,5 +1,10 @@
 <div class="d-flex align-items-center justify-content-center">
     <div class="col col-md-6">
+        <?php if(validation_errors() != null): ?>
+            <div class="alert alert-danger">
+                <p><?= validation_list_errors(); ?></p>
+            </div>
+        <?php endif ?>
         <form action="<?= base_url('users/edit/'.$user['id']); ?>" method="post" class="adjust">
             <div class="form-group mb-2">
                 <label for="name" class="form-label">Fullname</label>

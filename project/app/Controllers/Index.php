@@ -39,6 +39,9 @@ class Index extends BaseController{
     // login function here
     public function login(){
         if(session()->has('isLogged')){
+            if(session()->get('role') == 'itso'){
+                return redirect()->to('welcome');
+            }
             return redirect()->to('/');
         }
 
@@ -61,6 +64,7 @@ class Index extends BaseController{
                 } else {
                     // Redirects to home page if log in was successful
                     session()->set('isLogged', true);
+                    session()->set('role', $user['role']);
                     return redirect()->to('/');
                 }
             }
@@ -81,6 +85,8 @@ class Index extends BaseController{
             $userreset = $this->request->getPost(['username']);
             // Set filter then query from tblusers
             $user  = $usersmodel->where('username', $userreset['username'])->first();
+
+            
             
             if(!$user){
                 session()->setFlashdata('error', "Username doesn't exist.");

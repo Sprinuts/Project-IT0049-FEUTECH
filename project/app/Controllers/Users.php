@@ -60,7 +60,7 @@ class Users extends BaseController{
 
             if(!$this->validateData($registerdata ,$rules, $messages)){
                 //reload the page with errors
-                
+
                 $data['title'] = "Add User";
 
                 return view('include\header_itso', $data)
@@ -89,9 +89,9 @@ class Users extends BaseController{
             // sending the activation code to the user
             $email = service('email');
             $email->setTo($registerdata['email']);
-            $message = "Hello, " . $registerdata['name'] . "!\n\nCongratulations, you are now part of Forknik University.
+            $message = "Hello, " . $registerdata['name'] . "!\n\nCongratulations, you are now part of Far Eastern University Institute of Technology.
             Please <a href='". base_url('users/activate/'.$registerdata['activationcode']) ."'>
-            click this activation link</a> to activate your account.<br><br> <b>From Forknik University</b>";
+            click this activation link</a> to activate your account.<br><br> <b>From Far Eastern University Institute of Technology</b>";
             $email->setMessage($message);
             if(!$email->send()){
                 print_r($email->printDebugger());
@@ -147,6 +147,41 @@ class Users extends BaseController{
                 'role',
                 'email',
             ]);
+
+            $rules = [
+                'name' => 'required',
+                'birthdate' => 'required',
+                'role' => 'required',
+                'email' => 'required|valid_email',
+            ];
+
+            $messages = [
+                'name' => [
+                    'required' => 'Fullname is required.'
+                ],
+                'birthdate' => [
+                    'required' => 'Birthdate is required.'
+                ],
+                'role' => [
+                    'required' => 'Role is required.'
+                ],
+                'email' => [
+                    'required' => 'Email is required.',
+                    'valid_email' => 'Email is invalid.'
+                ],
+            ];
+
+            if(!$this->validateData($updatedata ,$rules, $messages)){
+                //reload the page with errors
+                
+                $data['title'] = "Add User";
+
+                return view('include\header_itso', $data)
+                    .view('include\navbar_itso')
+                    .view('users_edit')
+                    .view('include\footer_itso');
+
+            }
 
             $usersmodel->update($id, $updatedata);
 
