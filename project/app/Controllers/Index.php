@@ -18,17 +18,17 @@ class Index extends BaseController{
     }
 
     // add index function here for itso welcome page
-    public function welcome(){
+    public function welcomeitso(){
         if(!session()->has('isLogged')){
             return redirect()->to('login');
+            
         }
-
-        echo "hello gawin mo na project";
 
         $data['title'] = "Welcome to Forknik University";
 
         return view('include\header', $data)
             .view('include\navbar_itso')
+            .view('welcomeitso_view')
             .view('include\footer');
     }
 
@@ -40,9 +40,12 @@ class Index extends BaseController{
     public function login(){
         if(session()->has('isLogged')){
             if(session()->get('role') == 'itso'){
+                return redirect()->to('welcomeitso');
+            } else if(session()->get('role') == 'associate'){
+                return redirect()->to('welcome');
+            } else if(session()->get('role') == 'student'){
                 return redirect()->to('welcome');
             }
-            return redirect()->to('/');
         }
 
 
@@ -86,8 +89,7 @@ class Index extends BaseController{
             // Set filter then query from tblusers
             $user  = $usersmodel->where('username', $userreset['username'])->first();
 
-            
-            
+
             if(!$user){
                 session()->setFlashdata('error', "Username doesn't exist.");
 
@@ -117,9 +119,40 @@ class Index extends BaseController{
             // Load model
             $usersmodel = model('Users_model');
             // Retrieve data from form
-            $userreset = $this->request->getPost(['newpass']);
+            $userreset = $this->request->getPost([
+                'newpass',
+                'confirmpass',
+            ]);
             // Set filter then query from tblusers
             $user  = $usersmodel->where('resetcode', $resetcode)->first();
+
+            $rules = [
+                'newpass' => 'required|min_length[8]',
+                'confirmpass' => 'required|matches[newpass]',
+            ];
+
+            $messages = [
+                'newpass' => [
+                    'required' => 'New password is required.',
+                    'min_length' => 'New password must be at least 8 characters.',
+                ],
+                'confirmpass' => [
+                    'required' => 'Confirm password is required.',
+                    'matches' => 'Passwords do not match.',
+                ],
+            ];
+
+            if(!$this->validateData($userreset ,$rules, $messages)){
+                //reload the page with errors
+
+                $data['resetcode'] = $resetcode;
+
+                $data['title'] = "New Password";
+
+                return view('include\header', $data)
+                    .view('reset_view', $data)
+                    .view('include\footer');
+            }
             
             if(!$user){
                 echo $resetcode;
