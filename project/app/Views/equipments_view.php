@@ -17,31 +17,34 @@
             <tbody>
                 <?php foreach($equipments as $equipment): ?>
                 <tr>
-                    <td><?= $equipment->id; ?></td>
-                    <td><?= $equipment->equipmentid; ?></td>
-                    <td><?= $equipment->equipmentname; ?></td>
-                    <td><?= $equipment->category; ?></td>
+                    <td><?= $equipment['id']; ?></td>
+                    <td><?= $equipment['equipmentid']; ?></td>
+                    <td><?= $equipment['equipmentname']; ?></td>
+                    <td><?= $equipment['category']; ?></td>
                     <td>
                         <?php 
-                            if (!is_null($equipment->reserver)) {
+                            if (!is_null($equipment['reserver'])) {
                                 echo 'Reserved';
-                            } elseif (!is_null($equipment->borrower)) {
+                            } elseif (!is_null($equipment['borrower'])) {
                                 echo 'Borrowed';
                             } else {
-                                echo $equipment->status == 1 ? 'Available' : 'Deactivated';
+                                echo $equipment['status'] == 1 ? 'Available' : 'Deactivated';
                             }
                         ?>
                     </td>
-                    <td><?= $equipment->description; ?></td>
+                    <td><?= $equipment['description']; ?></td>
 
                     <td>
-                        <a href="<?= base_url('equipments/view/'.$equipment->id); ?>" class="btn btn-sm btn-warning">View</a>
-                        <a href="<?= base_url('equipments/edit/'.$equipment->id); ?>" class="btn btn-sm btn-secondary">Edit</a>
-                        <a href="<?= base_url('equipments/delete/'.$equipment->id); ?>" class="btn btn-sm btn-danger">Delete</a>
+                        <a href="<?= base_url('equipments/view/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">View</a>
+                        <a href="<?= base_url('equipments/edit/'.$equipment['id']); ?>" class="btn btn-sm btn-secondary">Edit</a>
+                        <a href="<?= base_url('equipments/delete/'.$equipment['id']); ?>" class="btn btn-sm btn-danger">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <div>
+            <?= $pager->links(); ?>
+        </div>
     </div>
 </div>

@@ -13,7 +13,7 @@
 
             <div class="form-group mb-2">
                 <label for="category" class="form-label">Category</label>
-                <select name="category" id="category" class="form-control" onchange="updateAccessories()" value="<?= $equipment['category']; ?>">
+                <select name="category" id="category" class="form-control" value="<?= $equipment['category']; ?>" onchange="updateAccessories()">
                     <option value="" disabled selected>Select Category</option>
                     <option value="laptop" <?= set_value('category') == 'laptop' ? 'selected' : '' ?>>Laptop</option>
                     <option value="dlp" <?= set_value('category') == 'dlp' ? 'selected' : '' ?>>DLP</option>
@@ -44,10 +44,20 @@
                     </optgroup>
                 </select>
             </div>
+
             <div class="form-group mb-2">
-                <label for="birthdate" class="form-label">Birthdate</label>
-                <input type="date" name="birthdate" id="birthdate" class="form-control" value="<?= date('Y-m-d', strtotime($equipment['birthdate'])); ?>">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="description" id="description" class="form-control" rows="3"><?= $equipment['description']; ?></textarea>
             </div>
+
+            <div class="form-group mb-2">
+                <label for="status" class="form-label">Status</label>
+                <select name="status" id="status" class="form-control">
+                    <option value="1" <?= $equipment['status'] == 1 ? 'selected' : '' ?>>Activate</option>
+                    <option value="0" <?= $equipment['status'] == 0 ? 'selected' : '' ?>>Deactivate</option>
+                </select>
+            </div>
+
             <div class="form-group">
                 <button type="submit" class="btn btn-success">Save Changes</button>
                 <a href="<?= base_url('equipments'); ?>" class="btn btn-danger">Cancel</a>

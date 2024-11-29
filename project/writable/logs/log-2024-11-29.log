@@ -650,3 +650,283 @@ INFO - 2024-11-29 19:39:04 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-29 19:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 19:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 19:57:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:07:03 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:03 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:04 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:05 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:05 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:05 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:05 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:05 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:06 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:06 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 38.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(16): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:57 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 20.
+ 1 APPPATH\Views\equipments_view.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(19): view('equipments_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:07:58 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 20.
+ 1 APPPATH\Views\equipments_view.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php', 20)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(19): view('equipments_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:08:38 --> ErrorException: Attempt to read property "reserver" on array
+[Method: GET, Route: equipments]
+in APPPATH\Views\equipments_view.php on line 26.
+ 1 APPPATH\Views\equipments_view.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "reserver" on array', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(19): view('equipments_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-29 20:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:10:06 --> ErrorException: Undefined array key "birthdate"
+[Method: GET, Route: equipments/edit/5]
+in APPPATH\Views\equipments_edit.php on line 49.
+ 1 APPPATH\Views\equipments_edit.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "birthdate"', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_edit.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_edit', [], true)
+ 5 APPPATH\Controllers\Equipments.php(149): view('equipments_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->edit('5')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-29 20:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:14:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 20:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 20:56:31 --> ErrorException: Undefined variable $equipments
+[Method: GET, Route: equipments/view/6]
+in APPPATH\Views\equipments_view.php on line 18.
+ 1 APPPATH\Views\equipments_view.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $equipments', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php', 18)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipments_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(162): view('equipments_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 20:56:58 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: equipments/view/6]
+in APPPATH\Views\equipments_view.php on line 20.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipments_view', [], true)
+ 4 APPPATH\Controllers\Equipments.php(162): view('equipments_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->view('6')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 21:00:02 --> ErrorException: Undefined variable $equipment
+[Method: GET, Route: equipments/view/6]
+in APPPATH\Views\equipmentsid_view.php on line 6.
+ 1 APPPATH\Views\equipmentsid_view.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $equipment', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php', 6)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipmentsid_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(162): view('equipmentsid_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 21:00:08 --> ErrorException: Undefined array key "type"
+[Method: GET, Route: equipments/view/6]
+in APPPATH\Views\equipmentsid_view.php on line 14.
+ 1 APPPATH\Views\equipmentsid_view.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "type"', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipmentsid_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(162): view('equipmentsid_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 21:06:55 --> ErrorException: Undefined variable $user
+[Method: GET, Route: equipments/view/6]
+in APPPATH\Views\equipmentsid_view.php on line 30.
+ 1 APPPATH\Views\equipmentsid_view.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php', 30)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipmentsid_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(162): view('equipmentsid_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-29 21:07:30 --> ErrorException: Undefined array key "birthdate"
+[Method: GET, Route: equipments/view/6]
+in APPPATH\Views\equipmentsid_view.php on line 30.
+ 1 APPPATH\Views\equipmentsid_view.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "birthdate"', 'C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php', 30)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\Project-IT0049-FEUTECH\\project\\app\\Views\\equipmentsid_view.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1169): CodeIgniter\View\View->render('equipmentsid_view', [], true)
+ 5 APPPATH\Controllers\Equipments.php(162): view('equipmentsid_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Equipments->view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Equipments))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-11-29 21:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 21:11:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

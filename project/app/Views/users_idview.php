@@ -33,7 +33,6 @@
                 <label for="datecreated" class="form-label">Date Created</label>
                 <input type="date" name="datecreated" id="datecreated" class="form-control" value="<?= date('Y-m-d', strtotime($user['birthdate'])); ?>" readonly>
             </div>
-
             <div class="form-group">
                 <a href="<?= base_url('users'); ?>" class="btn btn-danger">Go Back</a>
             </div>
