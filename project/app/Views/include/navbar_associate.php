@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">
+        <a class="navbar-brand" href="<?= base_url(relativePath: 'welcomestudent'); ?>">
             <img src="<?= base_url("public/style/feutech.png") ?>" alt="home" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
