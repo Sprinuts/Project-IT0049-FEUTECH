@@ -23,7 +23,16 @@ class Borrow extends BaseController{
 
         $equipmentsmodel = model('Equipments_model');
 
-        $data['equipments'] = $equipmentsmodel->get()->getResult();
+        // $data['equipments'] = $equipmentsmodel->get()->getResult();
+        $data['equipments'] = $equipmentsmodel
+            ->where('category', $category)
+            ->where('reserver IS NULL')
+            ->where('borrower IS NULL')
+            ->where('status', 1)
+            ->paginate(2);
+
+        
+        $data['pager'] = $equipmentsmodel->pager;
 
         $data['title'] = "Borrow Equipments";
 
@@ -33,19 +42,46 @@ class Borrow extends BaseController{
 
         if(session()->get('role') == 'associate'){
             return view('include\header', $data) 
-            .view('include\navbar_associate')
-            .view('borrowing_view', $data)
-            .view('include\footer');
+                .view('include\navbar_associate')
+                .view('borrowing_view', $data)
+                .view('include\footer');
         } else if(session()->get('role') == 'student'){
             return view('include\header', $data) 
-            .view('include\navbar_student')
-            .view('borrowing_view', $data)
-            .view('include\footer');
+                .view('include\navbar_students')
+                .view('borrowing_view', $data)
+                .view('include\footer');
         }
         // return view('include\header', $data) //change this to associate or student depending on the condition on the session
         //     .view('include\navbar')
         //     .view('borrowing_view', $data)
         //     .view('include\footer');
+    }
+
+    public function borrow($id){
+        $equipmentsmodel = model('Equipments_model');
+        $username = session()->get('username');
+        $dateborrowed = date('Y-m-d H:i:s');
+
+        $data['equipment'] = $equipmentsmodel->find($id);
+
+        $data['title'] = "Borrow Equipments";
+
+        return view('include\header', $data) //change this to associate or student depending on the condition on the session
+            .view('include\navbar')
+            .view('borrow_view', $data)
+            .view('include\footer');
+    }
+    public function confirmBorrow($id){
+        $equipmentsmodel = model('Equipments_model');
+        $username = session()->get('username');
+        $dateborrowed = date('Y-m-d H:i:s');
+
+        $equipmentsmodel->update($id, [
+            'borrower' => $username,
+            'dateborrowed' => $dateborrowed
+        ]);
+
+        return redirect()->to('/borrow');
     }
 
 }

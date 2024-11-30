@@ -48,4 +48,5 @@ $routes->get('(?i)equipments/view/(:num)', 'Equipments::view/$1'); //view equipm
 
 //borrow route
 $routes->get('(?i)borrow', 'Borrow::index'); //borrow equipment
+$routes->get('(?i)borrowing/borrow/(:num)', 'Borrow::borrow/$1'); //borrow equipment by id
 $routes->get('(?i)borrowing/(:any)', 'Borrow::borrowing/$1'); //borrow equipment by category
