@@ -1,7 +1,7 @@
 <head>
 </head>
 <div>
-    <h3 class="text-center">List of Equiment</h3>
+    <h3 class="text-center">List of Equipment</h3>
     <div class="adjust">
         <table class="adjustBtn table table-striped table-hover table-light table-bordered table-responsive">
             <thead>
