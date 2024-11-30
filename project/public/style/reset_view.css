@@ -1,7 +1,18 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margin */
+    background-color: #f3f3f3; /* Optional background color */
+    font-family: Arial, sans-serif; /* Optional font */
+}
+
 .password-container {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 input[type="password"],
