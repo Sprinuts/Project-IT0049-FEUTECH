@@ -56,5 +56,5 @@ $routes->get('(?i)borrowing/(:any)', 'Borrow::borrowing/$1'); //borrow equipment
 
 //return route
 $routes->get('(?i)returning', 'Returning::index'); //return equipment
-$routes->get('(?i)returning/return/(:num)', 'Returning::returning/$1'); //return equipment by id
+$routes->get('(?i)returning/(:num)', 'Returning::returning/$1'); //return equipment by id
 
