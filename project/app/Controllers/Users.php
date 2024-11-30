@@ -130,6 +130,10 @@ class Users extends BaseController{
         $updatedata['status'] = 1;
         $usersmodel->update($user['id'], $updatedata);
 
+        if(session()->has('isLogged')){
+            return redirect()->to('logout');
+        }
+
         return redirect()->to('login'); //change this later, it should direct to login
     }
 
