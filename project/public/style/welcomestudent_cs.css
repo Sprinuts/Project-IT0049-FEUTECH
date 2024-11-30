@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7; /* Light gray background */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 4px solid #333; /* Adds a border below the header */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle text shadow */
+}
+
+/* Introduction Section */
+.introduction {
+    padding: 60px 80px; /* More padding to increase the space around content */
+    background-color: #fff;
+    margin: 40px auto; /* Increased margin for spacing */
+    border-radius: 20px; /* More rounded corners for a softer, modern look */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+    max-width: 1600px; /* Increased max-width to make the section wider */
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #e2f7e2, #f5f9f5); /* Soft gradient background */
+}
+
+.introduction::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Slight dark overlay for depth */
+    z-index: -1; /* Places it behind the content */
+    border-radius: 20px; /* Ensures overlay follows the rounded corners */
+}
+
+.introduction p {
+    font-size: 1.5rem; /* Larger font size for better readability */
+    color: #555;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    line-height: 1.8;
+    text-align: justify; /* Justify text for a more polished look */
+    letter-spacing: 0.5px; /* Slight spacing between letters */
+}
+
+.introduction h2 {
+    font-size: 3rem; /* Larger header for better emphasis */
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase for better hierarchy */
+    letter-spacing: 1px; /* Slight spacing for a refined look */
+    border-bottom: 4px solid #4CAF50; /* Green border under the header */
+    padding-bottom: 10px; /* Padding to make space for the border */
+}
+
+.introduction ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.introduction ul li {
+    font-size: 1.4rem; /* Slightly larger font size for readability */
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.introduction::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4CAF50; /* Green line to match the theme */
+    border-radius: 0 0 20px 20px; /* Rounded corners for a modern touch */
+}
+
+@media (max-width: 768px) {
+    .introduction {
+        padding: 40px 50px; /* Adjust padding on smaller screens */
+        margin: 20px auto;
+    }
+
+    .introduction h2 {
+        font-size: 2.5rem; /* Adjust font size for mobile */
+    }
+
+    .introduction p {
+        font-size: 1.3rem; /* Adjust font size for mobile */
+    }
+}
+
+/* System Overview Section */
+.overview {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.overview h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.equipment-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.equipment-image:hover {
+    transform: scale(1.05); /* Scale the image on hover */
+}
+
+/* Available Items Section */
+.available-items {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+}
+
+.available-items h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.available-items ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.available-items ul li {
+    font-size: 1.3rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-borrow {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-borrow:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight button scale on hover */
+}
+
+/* Borrowing Process Section */
+.borrowing-process {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.borrowing-process h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.borrowing-process ol {
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.borrowing-process li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Contact Information Section */
+.contact {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact ul li {
+    font-size: 1.2rem;
+    padding: 12px 0;
+}
+
+.contact a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll-to-top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: none;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.scroll-to-top:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .introduction, .overview, .available-items, .borrowing-process, .contact {
+        padding: 20px;
+    }
+
+    .available-items ul li {
+        font-size: 1.1rem;
+    }
+
+    .btn-borrow {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
