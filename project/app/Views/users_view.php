@@ -1,4 +1,5 @@
 <div>
+    <link rel="stylesheet" href="<?= base_url('public/style/users_cs.css') ?>">
     <h3 class="text-center">List of Users</h3>
     <div class="adjust">
         <a href="<?= base_url('users/add'); ?>" class="btn btn-lg btn-success adjustBtn">Add New User</a>
