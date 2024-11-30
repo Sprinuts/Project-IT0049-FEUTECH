@@ -1,3 +1,5 @@
+<head>
+</head>
 <div>
     <h3 class="text-center">List of Equiment</h3>
     <div class="adjust">
@@ -32,7 +34,10 @@
                     <td><?= $equipment['description']; ?></td>
 
                     <td>
-                        <a href="<?= base_url('borrowing/borrow/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Borrow</a>
+                        <a href="<?= base_url('borrowing/borrow/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">
+                        <span class="sign">+</span>
+                        <span class="text">Borrow</span>
+                        </a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
