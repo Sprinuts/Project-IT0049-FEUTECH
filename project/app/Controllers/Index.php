@@ -21,7 +21,6 @@ class Index extends BaseController{
         $data['title'] = "Welcome to Forknik University";
 
         return view('include\header', $data)
-            .view('include\navbar_itso')
             .view('include\footer');
     }
 

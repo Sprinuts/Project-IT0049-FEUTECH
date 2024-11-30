@@ -59,20 +59,12 @@ class Borrow extends BaseController{
 
     public function borrow($id){
         $equipmentsmodel = model('Equipments_model');
-        $username = session()->get('username');
-        $dateborrowed = date('Y-m-d H:i:s');
+        $usersmodel = model('Users_model');
 
-        $data['equipment'] = $equipmentsmodel->find($id);
+        $equipment = $equipmentsmodel->find($id);
 
-        $data['title'] = "Borrow Equipments";
+        $registerdata = $usersmodel->where('username', session()->get('username'))->first();
 
-        return view('include\header', $data) //change this to associate or student depending on the condition on the session
-            .view('include\navbar')
-            .view('borrow_view', $data)
-            .view('include\footer');
-    }
-    public function confirmBorrow($id){
-        $equipmentsmodel = model('Equipments_model');
         $username = session()->get('username');
         $dateborrowed = date('Y-m-d H:i:s');
 
@@ -81,7 +73,28 @@ class Borrow extends BaseController{
             'dateborrowed' => $dateborrowed
         ]);
 
+        $email = service('email');
+        $email->setTo($registerdata['email']);
+        $message = "Hello, " . $registerdata['name'] . "!\n\nYou Borrowed. '".$equipment['equipmentname']."' on "
+        .$dateborrowed.".\n\n<b>From Far Eastern University Institute of Technology</b>";
+        $email->setMessage($message);
+        if(!$email->send()){
+            print_r($email->printDebugger());
+        }
+
         return redirect()->to('/borrow');
     }
+    // public function confirmBorrow($id){
+    //     $equipmentsmodel = model('Equipments_model');
+    //     $username = session()->get('username');
+    //     $dateborrowed = date('Y-m-d H:i:s');
+
+    //     $equipmentsmodel->update($id, [
+    //         'borrower' => $username,
+    //         'dateborrowed' => $dateborrowed
+    //     ]);
+
+    //     return redirect()->to('/borrow');
+    // }
 
 }
