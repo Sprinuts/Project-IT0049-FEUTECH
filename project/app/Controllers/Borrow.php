@@ -12,10 +12,17 @@ class Borrow extends BaseController{
 
         $data['title'] = "Borrow Equipments";
 
-        return view('include\header_itso', $data) //change this to associate or student depending on the condition on the session
-            .view('include\navbar_itso')
-            .view('borrow_view', $data)
-            .view('include\footer_itso');
+        if(session()->get('role') == 'associate'){
+            return view('include\header', $data) 
+                .view('include\navbar_associate')
+                .view('borrowing_view', $data)
+                .view('include\footer');
+        } else if(session()->get('role') == 'student'){
+            return view('include\header', $data) 
+                .view('include\navbar_students')
+                .view('borrowing_view', $data)
+                .view('include\footer');
+        }
 
     }
 
