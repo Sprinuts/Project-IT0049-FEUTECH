@@ -15,15 +15,14 @@ class Borrow extends BaseController{
         if(session()->get('role') == 'associate'){
             return view('include\header', $data) 
                 .view('include\navbar_associate')
-                .view('borrowing_view', $data)
+                .view('borrow_view', $data)
                 .view('include\footer');
         } else if(session()->get('role') == 'student'){
             return view('include\header', $data) 
                 .view('include\navbar_students')
-                .view('borrowing_view', $data)
+                .view('borrow_view', $data)
                 .view('include\footer');
         }
-
     }
 
     public function borrowing($category){
@@ -38,7 +37,6 @@ class Borrow extends BaseController{
             ->where('status', 1)
             ->paginate(2);
 
-        
         $data['pager'] = $equipmentsmodel->pager;
 
         $data['title'] = "Borrow Equipments";
