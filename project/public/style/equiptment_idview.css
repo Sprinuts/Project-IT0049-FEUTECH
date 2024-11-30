@@ -81,7 +81,6 @@ form .form-group {
     justify-content: flex-start; /* Align buttons to the left */
     gap: 10px; /* Adds space between buttons */
     justify-content: center; /* Center the buttons horizontally */
-
 }
 
 /* Use flexbox for the input group to align icons and input */
@@ -138,6 +137,7 @@ form .form-group {
     background-color: #fff; /* Keep the background white */
     background-image: none; /* Ensure no background gradient */
 }
+
 /* Button Styles with Gradient Effect */
 .btn-danger, .btn-success {
     display: inline-block; /* Ensures buttons are inline */
@@ -155,7 +155,6 @@ form .form-group {
     width: auto; /* Allow buttons to adjust to their content size */
     flex: 1; /* Optional: Make buttons equal in size */
     text-align: center; /* Center text inside buttons */
-
 }
 
 .btn-danger:hover, .btn-success:hover {
@@ -225,7 +224,6 @@ form .form-group {
     margin-top: 0; /* Fix the space issue */
 }
 
-
 .input-group .input-group-prepend span {
     display: flex;
     justify-content: center;
@@ -241,4 +239,3 @@ form .form-group {
     position: relative;
     top: -30px; /* Adjust this negative value to move it upwards */
 }
-

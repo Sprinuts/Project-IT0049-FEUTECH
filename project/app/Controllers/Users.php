@@ -15,7 +15,7 @@ class Users extends BaseController{
         $usersmodel = model('Users_model');
 
         //$data['users'] = $usersmodel->get()->getResult();
-        $data['users'] = $usersmodel->paginate(2); //increase this if not testing
+        $data['users'] = $usersmodel->paginate(10); //increase this if not testing
         $data['pager'] = $usersmodel->pager;
 
 
