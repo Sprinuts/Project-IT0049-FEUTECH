@@ -28,11 +28,11 @@
         </ul>
         <p>To request any of the services listed above, simply click the button below and submit your request through the ITSO platform.</p>
         <a href="<?= base_url('itso-services') ?>" class="btn-request">Request ITSO Services</a>
-    </section>
+        </section>
 
-    <!-- Request Process Section -->
-    <section class="request-process">
-        <h2>How to Request ITSO Services</h2>
+        <!-- Request Process Section -->
+        <section class="request-process">
+        <h2><i class="fa-solid fa-circle-question"></i> How to Request ITSO Services</h2>
         <p>Follow these easy steps to request IT services:</p>
         <ol>
             <li>Log in to your FEU Tech account.</li>
@@ -46,7 +46,7 @@
 
     <!-- Contact Information Section -->
     <section class="contact">
-        <h2>Contact ITSO for Assistance</h2>
+        <h2><i class="fa-solid fa-address-book"></i> Contact ITSO for Assistance</h2>
         <p>If you have any questions or need assistance with IT services, feel free to reach out:</p>
         <ul>
             <li>Email: <a href="mailto:itso@feutech.edu.ph">itso@feutech.edu.ph</a></li>
