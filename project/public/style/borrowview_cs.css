@@ -1,0 +1,11 @@
+.category-button-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.category-available {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
