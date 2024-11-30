@@ -10,14 +10,14 @@
 
     <!-- System Overview Section -->
     <section class="overview">
-        <h2>About Associate Services</h2>
+        <h2><i class="fa-solid fa-layer-group"></i> About Associate Services</h2>
         <p>The Associate Services platform is designed to support associates in their academic, operational, and professional development goals. Access resources, request assistance, and collaborate with peers seamlessly through this system.</p>
         <img src="<?= base_url('public/images/associate-services.jpg') ?>" alt="Associate Services" class="service-image">
     </section>
 
     <!-- Available Services Section -->
     <section class="available-services">
-        <h2>Available Associate Services</h2>
+        <h2><i class="fa-solid fa-handshake"></i> Available Associate Services</h2>
         <p>Here is a list of services provided for associates:</p>
         <ul>
             <li>Professional Development Workshops</li>
@@ -32,7 +32,7 @@
 
     <!-- Request Process Section -->
     <section class="request-process">
-        <h2>How to Access Associate Services</h2>
+        <h2><i class="fa-solid fa-circle-question"></i> How to Access Associate Services</h2>
         <p>Follow these simple steps to utilize the platform:</p>
         <ol>
             <li>Log in to your FEU Tech Associate account.</li>
@@ -45,7 +45,7 @@
 
     <!-- Contact Information Section -->
     <section class="contact">
-        <h2>Contact Us for Support</h2>
+        <h2><i class="fa-solid fa-address-book"></i> Contact Us for Support</h2>
         <p>If you need help or have inquiries regarding associate services, please contact us:</p>
         <ul>
             <li>Email: <a href="mailto:associates@feutech.edu.ph">associates@feutech.edu.ph</a></li>

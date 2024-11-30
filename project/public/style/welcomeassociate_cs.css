@@ -12,33 +12,40 @@ header {
     color: #fff;
     padding: 30px 20px;
     text-align: center;
+    border-bottom: 4px solid #333;
 }
 
 header h1 {
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
 }
 
 .introduction {
-    padding: 40px;
-    margin: 30px auto;
-    max-width: 1200px;
+    padding: 50px;
+    margin: 40px auto;
+    max-width: 1600px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #e2f7e2, #f5f9f5);
 }
 
 .introduction p {
-    font-size: 1.3rem;
-    line-height: 1.6;
+    font-size: 1.4rem;
     color: #555;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+.btn-request {
+    margin-bottom: 20px; 
 }
 
 /* Section Headings */
 .introduction h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-top: 30px;
-    color: #4CAF50;
+    color: #333;
     text-transform: uppercase;
     font-weight: bold;
 }
