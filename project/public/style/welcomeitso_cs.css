@@ -12,10 +12,12 @@ header {
     color: #fff;
     padding: 30px 20px;
     text-align: center;
+    border-bottom: 4px solid #333;
 }
 
 header h1 {
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
 }
 
@@ -25,7 +27,7 @@ header h1 {
     margin: 40px auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
+    max-width: 1600px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(to right, #e2f7e2, #f5f9f5);
