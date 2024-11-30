@@ -45,3 +45,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000); // Matches the animation duration
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    let isHoldingClick = false;
+    const body = document.querySelector('body');
+    const container = document.getElementById('container');
+    const registerBtn = document.getElementById('register');
+    const loginBtn = document.getElementById('login');
+    const alert = document.querySelector('.alert');
+
+    // Handle mouse events for dynamic element creation
+    const createAndAppendElement = (e) => {
+        // Your element creation logic here
+    };
+
+    document.addEventListener('mousedown', (e) => {
+        isHoldingClick = true;
+        createAndAppendElement(e);
+    });
+
+    document.addEventListener('mouseup', () => {
+        isHoldingClick = false;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isHoldingClick) {
+            createAndAppendElement(e);
+        }
+        body.style.backgroundPositionX = `${e.pageX / -4}px`;
+        body.style.backgroundPositionY = `${e.pageY / -4}px`;
+    });
+
+    // Toggle container class on button clicks
+    registerBtn?.addEventListener('click', () => container?.classList.add('active'));
+    loginBtn?.addEventListener('click', () => container?.classList.remove('active'));
+
+    // Auto-remove alert after 3 seconds
+    if (alert) {
+        setTimeout(() => alert.remove(), 3000);
+    }
+});
+
+function togglePassword(inputId, iconId) {
+    const passwordField = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    } else {
+        passwordField.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    }
+}
+
+
+
+

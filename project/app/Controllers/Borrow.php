@@ -43,7 +43,6 @@ class Borrow extends BaseController{
 
         $data['category'] = $category; 
         
-
         if(session()->get('role') == 'associate'){
             return view('include\header', $data) 
                 .view('include\navbar_associate')
