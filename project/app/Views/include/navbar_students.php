@@ -16,14 +16,11 @@
                 <li class="nav-item">
                     <a class="nav-link " href="">About</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Manage
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">Users</a></li>
-                        <li><a class="dropdown-item" href="">Products</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link " href="<?= base_url("borrow")?>">Borrow Equipment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="">Return Equipment</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

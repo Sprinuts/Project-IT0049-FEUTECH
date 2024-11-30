@@ -28,12 +28,8 @@ class Index extends BaseController{
     // add index function here for itso welcome page
     public function welcomeitso(){
         if(session()->has('isLogged')){
-            if(session()->get('role') == 'itso'){
-                return redirect()->to('welcomeitso');
-            } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcomeassociate');
-            } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcomestudent');
+            if(!session()->get('role') == 'itso'){
+                return redirect()->to('logout');
             }
         } else {
             return redirect()->to('login');
@@ -50,12 +46,8 @@ class Index extends BaseController{
     // add index function here for associate welcome page
     public function welcomeassociate(){
         if(session()->has('isLogged')){
-            if(session()->get('role') == 'itso'){
-                return redirect()->to('welcomeitso');
-            } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcomeassociate');
-            } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcomestudent');
+            if(!session()->get('role') == 'associate'){
+                return redirect()->to('logout');
             }
         } else {
             return redirect()->to('login');
@@ -64,20 +56,16 @@ class Index extends BaseController{
         $data['title'] = "Welcome to Forknik University";
 
         return view('include\header', $data)
-            .view('include\navbar_itso')
-            .view('welcomeitso_view')
+            .view('include\navbar_associate')
+            .view('welcomeassociate_view')
             .view('include\footer');
     }
 
     // add index function here for student welcome page
     public function welcomestudent(){
         if(session()->has('isLogged')){
-            if(session()->get('role') == 'itso'){
-                return redirect()->to('welcomeitso');
-            } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcomeassociate');
-            } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcomestudent');
+            if(!session()->get('role') == 'student'){
+                return redirect()->to('logout');
             }
         } else {
             return redirect()->to('login');
@@ -86,8 +74,8 @@ class Index extends BaseController{
         $data['title'] = "Welcome to Forknik University";
 
         return view('include\header', $data)
-            .view('include\navbar_itso')
-            .view('welcomeitso_view')
+            .view('include\navbar_students')
+            .view('welcomestudent_view')
             .view('include\footer');
     }
 
