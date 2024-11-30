@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #0066cc; /* FEU Tech color */
+    background-color: #4CAF50; /* FEU Tech color */
     color: #fff;
     padding: 30px 20px;
     text-align: center;
@@ -65,7 +65,7 @@ header h1 {
 
 .introduction .btn-request {
     display: inline-block;
-    background-color: #0066cc;
+    background-color: #4CAF50;
     color: #fff;
     padding: 12px 20px;
     border-radius: 5px;
@@ -77,7 +77,7 @@ header h1 {
 }
 
 .introduction .btn-request:hover {
-    background-color: #004d99;
+    background-color: #4CAF50;
 }
 
 .introduction .service-image {
@@ -109,7 +109,7 @@ ol li {
 }
 
 .contact a {
-    color: #0066cc;
+    color: #4CAF50;
     text-decoration: none;
 }
 
