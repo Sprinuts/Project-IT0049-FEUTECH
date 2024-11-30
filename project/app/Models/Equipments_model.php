@@ -24,6 +24,7 @@ class Equipments_model extends Model{
         'status',
         'category',
         'description',
+        'image',
     ];
 
 
