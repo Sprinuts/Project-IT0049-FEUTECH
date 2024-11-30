@@ -42,8 +42,8 @@
                     <option value="" disabled selected>Select Accessories</option>
                     <option value="none" <?= set_value('accessories') == 'none' ? 'selected' : '' ?>>None</option>
                     <option value="charger" <?= set_value('accessories') == 'charger' ? 'selected' : '' ?>>Charger</option>
-                    <option value="extension-vgahdmicable-powercable" <?= set_value('accessories') == 'extension-vgahdmicable-powercable' ? 'selected' : '' ?>>Extension Cord, VGA/HDMI Cable, Power Cable</option>
-                    <option value="lightningcable" <?= set_value('accessories') == 'lightningcable' ? 'selected' : '' ?>>Lightning Cable</option>
+                    <option value="extension-vga-hdmicable-powercable" <?= set_value('accessories') == 'extension-vga-hdmicable-powercable' ? 'selected' : '' ?>>Extension Cord, VGA/HDMI Cable, Power Cable</option>
+                    <option value="lightning-cable" <?= set_value('accessories') == 'lightning-cable' ? 'selected' : '' ?>>Lightning Cable</option>
                     <option value="pen" <?= set_value('accessories') == 'pen' ? 'selected' : '' ?>>Pen</option>
                 </select>
             </div>

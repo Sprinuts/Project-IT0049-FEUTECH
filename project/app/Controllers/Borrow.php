@@ -68,6 +68,8 @@ class Borrow extends BaseController{
 
         $registerdata = $usersmodel->where('username', session()->get('username'))->first();
 
+        $accessories = ucwords(str_replace('-', ' ', $equipment['accessories']));
+
         $username = session()->get('username');
         $dateborrowed = date('Y-m-d H:i:s');
 
@@ -78,7 +80,7 @@ class Borrow extends BaseController{
 
         $email = service('email');
         $email->setTo($registerdata['email']);
-        $message = "Hello, " . $registerdata['name'] . "!\n\nYou Borrowed. '".$equipment['equipmentname']."' on "
+        $message = "Hello, " . $registerdata['name'] . "!\n\nYou Borrowed. '".$equipment['equipmentname']."' with ".$accessories. " on "
         .$dateborrowed.".\n\n<b>From Far Eastern University Institute of Technology</b>";
         $email->setMessage($message);
         if(!$email->send()){
