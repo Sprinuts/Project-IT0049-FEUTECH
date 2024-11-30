@@ -41,7 +41,7 @@ class Borrow extends BaseController{
 
         $data['title'] = "Borrow Equipments";
 
-        $data['category'] = $category; 
+        $data['category'] = $category;
         
         if(session()->get('role') == 'associate'){
             return view('include\header', $data) 

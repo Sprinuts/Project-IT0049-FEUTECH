@@ -1,11 +1,7 @@
 <head>
 </head>
 <div>
-<<<<<<< Updated upstream
-    <h3 class="text-center">List of Equipment</h3>
-=======
-    <h3 class="text-center">List of Available Equipment</h3>
->>>>>>> Stashed changes
+    <h3 class="text-center">List of Return</h3>
     <div class="adjust">
         <table class="adjustBtn table table-striped table-hover table-light table-bordered table-responsive">
             <thead>
@@ -39,7 +35,7 @@
 
                     <td>
 
-                        <a href="<?= base_url('borrowing/borrow/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Borrow</a> 
+                        <a href="<?= base_url('return/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Return</a> 
                     </td>
                 </tr>
                 <?php endforeach; ?>
