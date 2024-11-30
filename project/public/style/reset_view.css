@@ -1,0 +1,86 @@
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="password"],
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+.toggle-icon:hover {
+    color: #000;
+}
+
+/* Submit button styling */
+#resetpass-btn {
+    background-color: rgb(41, 215, 67);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#resetpass-btn:hover {
+    background-color: rgb(241, 238, 238); /* White background */
+    color: black; /* Change text color to black on hover */
+    border: 2px solid black; /* Add black border on hover */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.resetpass-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="password"], 
+    #resetpass-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
