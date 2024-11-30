@@ -70,7 +70,18 @@ form .form-group {
     margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
+    gap: 10px; /* Space between the buttons */
     position: relative;
+    justify-content: space-between; /* Distribute buttons evenly */
+}
+
+.form-group-button {
+    display: flex;
+    flex-direction: row; /* Ensure buttons are in a horizontal row */
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Adds space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+
 }
 
 /* Use flexbox for the input group to align icons and input */
@@ -128,32 +139,43 @@ form .form-group {
     background-image: none; /* Ensure no background gradient */
 }
 /* Button Styles with Gradient Effect */
-.btn-danger {
-    background: linear-gradient(to right, #00c853, #fdd835); /* Green to Yellow Gradient */
+.btn-danger, .btn-success {
+    display: inline-block; /* Ensures buttons are inline */
+    text-align: center;
+    background: linear-gradient(to right, #00c853, #fdd835); /* Gradient background */
     color: #ffffff;
     border: none;
     padding: 12px 24px;
     border-radius: 8px;
-    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    text-decoration: none;
+    width: auto; /* Allow buttons to adjust to their content size */
+    flex: 1; /* Optional: Make buttons equal in size */
+    text-align: center; /* Center text inside buttons */
+
 }
 
-/* Button Hover and Active Effects */
-.btn-danger:hover {
-    background: linear-gradient(to right, #00796b, #fbc02d); /* Darker green and yellow on hover */
+.btn-danger:hover, .btn-success:hover {
+    background: linear-gradient(to right, #00796b, #fbc02d); /* On hover */
 }
 
-.btn-danger:active {
-    background: linear-gradient(to right, #004d40, #f9a825); /* Darker green and yellow on click */
+.btn-danger:active, .btn-success:active {
+    background: linear-gradient(to right, #004d40, #f9a825); /* On click */
     transform: scale(0.98);
 }
 
 /* Input Field Hover Effect */
 .input-group:hover .form-control {
     border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .btn-danger, .btn-success {
+        width: 100%; /* Full width on smaller screens */
+    }
 }
 
 /* Full-Width Button for Small Screens */

@@ -27,7 +27,7 @@ class Index extends BaseController{
     // add index function here for itso welcome page
     public function welcomeitso(){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'itso'){
+            if(session()->get('role') != 'itso'){
                 return redirect()->to('logout');
             }
         } else {
@@ -45,7 +45,7 @@ class Index extends BaseController{
     // add index function here for associate welcome page
     public function welcomeassociate(){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'associate'){
+            if(session()->get('role') != 'associate'){
                 return redirect()->to('logout');
             }
         } else {
@@ -63,7 +63,7 @@ class Index extends BaseController{
     // add index function here for student welcome page
     public function welcomestudent(){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'student'){
+            if(session()->get('role') != 'student'){
                 return redirect()->to('logout');
             }
         } else {
@@ -228,6 +228,14 @@ class Index extends BaseController{
     public function logout(){
         session()->destroy();
         return redirect()->to('login');
+    }
+
+    public function about(){
+        $data['title'] = "About Us";
+
+        return view('include\header', $data)
+            .view('about_view')
+            .view('include\footer');
     }
 }
 

@@ -9,7 +9,7 @@ class Equipments extends BaseController{
 
         // $data['equipments'] = $equipmentsmodel->get()->getResult();
 
-        $data['equipments'] = $equipmentsmodel->paginate(2); //increase this if not testing
+        $data['equipments'] = $equipmentsmodel->paginate(10); //increase this if not testing
         $data['pager'] = $equipmentsmodel->pager;
 
         $data['title'] = "List of Equipments";

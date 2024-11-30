@@ -5,7 +5,7 @@ namespace App\Controllers;
 class Users extends BaseController{
     public function index(){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'itso'){
+            if(session()->get('role') != 'itso'){
                 return redirect()->to('logout');
             }
         } else {
@@ -15,7 +15,7 @@ class Users extends BaseController{
         $usersmodel = model('Users_model');
 
         //$data['users'] = $usersmodel->get()->getResult();
-        $data['users'] = $usersmodel->paginate(2); //increase this if not testing
+        $data['users'] = $usersmodel->paginate(10); //increase this if not testing
         $data['pager'] = $usersmodel->pager;
 
 
@@ -30,7 +30,7 @@ class Users extends BaseController{
 
     public function add(){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'itso'){
+            if(session()->get('role') != 'itso'){
                 return redirect()->to('logout');
             }
         } else {
@@ -135,7 +135,7 @@ class Users extends BaseController{
 
     public function view($id = 0){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'itso'){
+            if(session()->get('role') != 'itso'){
                 return redirect()->to('logout');
             }
         } else {
@@ -156,7 +156,7 @@ class Users extends BaseController{
 
     public function edit($id = 0){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'itso'){
+            if(session()->get('role') != 'itso'){
                 return redirect()->to('logout');
             }
         } else {
@@ -229,7 +229,7 @@ class Users extends BaseController{
 
     public function delete($id = 0){
         if(session()->has('isLogged')){
-            if(!session()->get('role') == 'itso'){
+            if(session()->get('role') != 'itso'){
                 return redirect()->to('logout');
             }
         } else {

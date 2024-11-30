@@ -1,4 +1,6 @@
 <div class="d-flex align-items-center justify-content-center">
+    <link rel="stylesheet" href="<?= base_url('public/style/equiptment_add.css') ?>">
+
     <div class="col col-md-6">
         <?php if(validation_errors() != null): ?>
             <div class="alert alert-danger">
@@ -6,11 +8,13 @@
             </div>
         <?php endif ?>
         <form action="<?= base_url('equipments/add'); ?>" method="post" class="adjust">
+            <!-- Equipment Name -->
             <div class="form-group mb-2">
                 <label for="equipmentname" class="form-label">Equipment Name</label>
-                <input type="text" name="equipmentname" id="equipmentname" class="form-control" value="<?= set_value('equipmentname')?>">
+                <input type="text" name="equipmentname" id="equipmentname" class="form-control" value="<?= set_value('equipmentname') ?>">
             </div>
 
+            <!-- Category -->
             <div class="form-group mb-2">
                 <label for="category" class="form-label">Category</label>
                 <select name="category" id="category" class="form-control" onchange="updateAccessories()">
@@ -31,28 +35,29 @@
                 </select>
             </div>
 
+            <!-- Accessories -->
             <div class="form-group mb-2" id="accessories-group">
                 <label for="accessories" class="form-label">Accessories</label>
                 <select name="accessories" id="accessories" class="form-control" disabled>
-                    <optgroup>
                     <option value="" disabled selected>Select Accessories</option>
-                    <option value="none" <?= set_value('accessories') == 'none' ? 'selected' : '' ?> >None</option>
-                    <option value="charger" <?= set_value('accessories') == 'charger' ? 'selected' : '' ?> >Charger</option>
-                    <option value="extension-vgahdmicable-powercable" <?= set_value('accessories') == 'extension-vgahdmicable-powercable' ? 'selected' : '' ?> >Extension Cord, VGA/HDMI Cable, Power Cable</option>
-                    <option value="lightningcable" <?= set_value('accessories') == 'lightningcable' ? 'selected' : '' ?> >Lightning Cable</option>
-                    <option value="pen" <?= set_value('accessories') == 'pen' ? 'selected' : '' ?> disabled>Pen</option>
-                    </optgroup>
+                    <option value="none" <?= set_value('accessories') == 'none' ? 'selected' : '' ?>>None</option>
+                    <option value="charger" <?= set_value('accessories') == 'charger' ? 'selected' : '' ?>>Charger</option>
+                    <option value="extension-vgahdmicable-powercable" <?= set_value('accessories') == 'extension-vgahdmicable-powercable' ? 'selected' : '' ?>>Extension Cord, VGA/HDMI Cable, Power Cable</option>
+                    <option value="lightningcable" <?= set_value('accessories') == 'lightningcable' ? 'selected' : '' ?>>Lightning Cable</option>
+                    <option value="pen" <?= set_value('accessories') == 'pen' ? 'selected' : '' ?>>Pen</option>
                 </select>
             </div>
 
+            <!-- Description -->
             <div class="form-group mb-2">
                 <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" class="form-control" rows="3"><?= set_value('description')?></textarea>
+                <textarea name="description" id="description" class="form-control" rows="3"><?= set_value('description') ?></textarea>
             </div>
 
-            <div class="form-group">
-                <button type="submit" class="btn btn-success">Add Equipment</button>
-                <a href="<?= base_url('equipments'); ?>" class="btn btn-danger ms-2">Cancel</a>
+            <!-- Buttons -->
+            <div class="form-group-button">
+            <button type="submit" class="btn btn-success" style="margin-right: 10px;">Add Equipment</button>
+                <a href="<?= base_url('equipments'); ?>" class="btn btn-danger">Cancel</a>
             </div>
         </form>
     </div>

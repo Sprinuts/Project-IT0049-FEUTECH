@@ -1,7 +1,11 @@
 <head>
 </head>
 <div>
+<<<<<<< Updated upstream
     <h3 class="text-center">List of Equipment</h3>
+=======
+    <h3 class="text-center">List of Available Equipment</h3>
+>>>>>>> Stashed changes
     <div class="adjust">
         <table class="adjustBtn table table-striped table-hover table-light table-bordered table-responsive">
             <thead>

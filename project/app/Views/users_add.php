@@ -34,10 +34,9 @@
                 </select>
             </div>
 
-            <div class="form-group" style="margin-top: 20px;">
-                <button type="submit" class="btn btn-success" style="padding: 10px 20px; border-radius: 5px; font-size: 16px;">Add User</button>
-                <br>
-                <a href="<?= base_url('users'); ?>" class="btn btn-danger ms-2" style="padding: 10px 20px; border-radius: 5px; font-size: 16px; text-decoration: none;">Cancel</a>
+            <div class="form-group-button">
+                <button type="submit" class="btn btn-success">Add User</button>
+                <a href="<?= base_url('users'); ?>" class="btn btn-danger">Cancel</a>
             </div>
         </form>
     </div>
