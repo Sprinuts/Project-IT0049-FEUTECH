@@ -8,9 +8,9 @@ class Index extends BaseController{
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomeassociate');
             } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomestudent');
             }
         } else {
             return redirect()->to('login');
@@ -31,9 +31,9 @@ class Index extends BaseController{
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomeassociate');
             } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomestudent');
             }
         } else {
             return redirect()->to('login');
@@ -53,9 +53,9 @@ class Index extends BaseController{
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomeassociate');
             } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomestudent');
             }
         } else {
             return redirect()->to('login');
@@ -75,9 +75,9 @@ class Index extends BaseController{
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomeassociate');
             } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomestudent');
             }
         } else {
             return redirect()->to('login');
@@ -97,9 +97,9 @@ class Index extends BaseController{
             if(session()->get('role') == 'itso'){
                 return redirect()->to('welcomeitso');
             } else if(session()->get('role') == 'associate'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomeassociate');
             } else if(session()->get('role') == 'student'){
-                return redirect()->to('welcome');
+                return redirect()->to('welcomestudent');
             }
         }
 
@@ -118,17 +118,18 @@ class Index extends BaseController{
                 session()->setFlashdata('error', 'Username and/or password in invalid.');
             } else{
                 if ($user['status'] != 1) {
-                    echo "The account is not yet activated.";
+                    session()->setFlashdata('error', 'The account is not yet activated. Please check your email.');
                 } else {
                     // Redirects to home page if log in was successful
                     session()->set('isLogged', true);
+                    session()->set('username', $user['username']);
                     session()->set('role', $user['role']);
                     if($user['role'] == 'itso'){
                         return redirect()->to('welcomeitso');   
                     } else if($user['role'] == 'associate'){
-                        return redirect()->to('welcome');
+                        return redirect()->to('welcomeassociate');
                     } else if($user['role'] == 'student'){
-                        return redirect()->to('welcome');
+                        return redirect()->to('welcomestudent');
                     }
                 }
             }

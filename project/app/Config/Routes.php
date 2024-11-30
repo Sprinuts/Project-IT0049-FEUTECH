@@ -13,6 +13,8 @@ $routes->get('(?i)index', 'Index::index');
 
 //welcome route
 $routes->get('(?i)welcomeitso', 'Index::welcomeitso'); //welcome page for ITSO
+$routes->get('(?i)welcomeassociate', 'Index::welcomeassociate'); //welcome page for Associate
+$routes->get('(?i)welcomestudent', 'Index::welcomestudent'); //welcome page for Student 
 
 //users route
 $routes->get('(?i)users', 'Users::index'); //list of users
@@ -46,3 +48,4 @@ $routes->get('(?i)equipments/view/(:num)', 'Equipments::view/$1'); //view equipm
 
 //borrow route
 $routes->get('(?i)borrow', 'Borrow::index'); //borrow equipment
+$routes->get('(?i)borrowing/(:any)', 'Borrow::borrowing/$1'); //borrow equipment by category
