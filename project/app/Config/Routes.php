@@ -16,6 +16,9 @@ $routes->get('(?i)welcomeitso', 'Index::welcomeitso'); //welcome page for ITSO
 $routes->get('(?i)welcomeassociate', 'Index::welcomeassociate'); //welcome page for Associate
 $routes->get('(?i)welcomestudent', 'Index::welcomestudent'); //welcome page for Student 
 
+//about route
+$routes->get('(?i)about', 'Index::about'); //about page
+
 //users route
 $routes->get('(?i)users', 'Users::index'); //list of users
 $routes->get('(?i)users/add', 'Users::add'); //add new user direct
@@ -54,3 +57,4 @@ $routes->get('(?i)borrowing/(:any)', 'Borrow::borrowing/$1'); //borrow equipment
 //return route
 $routes->get('(?i)returning', 'Returning::index'); //return equipment
 $routes->get('(?i)returning/return/(:num)', 'Returning::returning/$1'); //return equipment by id
+

@@ -229,6 +229,14 @@ class Index extends BaseController{
         session()->destroy();
         return redirect()->to('login');
     }
+
+    public function about(){
+        $data['title'] = "About Us";
+
+        return view('include\header', $data)
+            .view('about_view')
+            .view('include\footer');
+    }
 }
 
 
