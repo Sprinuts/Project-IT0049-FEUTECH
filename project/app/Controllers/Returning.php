@@ -37,6 +37,9 @@ class Returning extends BaseController{
 
         $equipmentsmodel = model('Equipments_model');
         $usersmodel = model('Users_model');
+        $reportsmodel = model('Reports_model');
+
+        $username = session()->get('username');
 
         $equipment = $equipmentsmodel->where('id', $id)->first();
 
@@ -59,6 +62,12 @@ class Returning extends BaseController{
         if(!$email->send()){
             print_r($email->printDebugger());
         }
+
+        $reportsmodel->insert([
+            'username' => $username,
+            'equipmentid' => $equipment['equipmentid'],
+            'type' => 'Returned',
+        ]);
 
         return redirect()->to('returning');
 

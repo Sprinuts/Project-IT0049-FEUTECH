@@ -20,6 +20,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="<?= base_url(relativePath: 'users'); ?>">Users</a></li>
                         <li><a class="dropdown-item" href="<?= base_url(relativePath: 'equipments'); ?>">Equipments</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url(relativePath: 'reports'); ?>">Reports</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

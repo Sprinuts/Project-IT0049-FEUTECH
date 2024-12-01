@@ -63,6 +63,7 @@ class Borrow extends BaseController{
     public function borrow($id){
         $equipmentsmodel = model('Equipments_model');
         $usersmodel = model('Users_model');
+        $reportsmodel = model('Reports_model');
 
         $equipment = $equipmentsmodel->find($id);
 
@@ -87,19 +88,13 @@ class Borrow extends BaseController{
             print_r($email->printDebugger());
         }
 
+        $reportsmodel->insert([
+            'username' => $username,
+            'equipmentid' => $equipment['equipmentid'],
+            'type' => 'Borrowed',
+        ]);
+
         return redirect()->to('/borrow');
     }
-    // public function confirmBorrow($id){
-    //     $equipmentsmodel = model('Equipments_model');
-    //     $username = session()->get('username');
-    //     $dateborrowed = date('Y-m-d H:i:s');
-
-    //     $equipmentsmodel->update($id, [
-    //         'borrower' => $username,
-    //         'dateborrowed' => $dateborrowed
-    //     ]);
-
-    //     return redirect()->to('/borrow');
-    // }
 
 }
