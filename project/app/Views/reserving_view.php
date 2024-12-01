@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?= base_url('public/style/borrow_view.css'); ?>">
 
 <div>
     <h3 class="text-center">List of Available Equipment for Reservation</h3>
