@@ -230,14 +230,42 @@ class Index extends BaseController{
         return redirect()->to('login');
     }
 
-    public function about(){
+    public function about()
+    {
+        if (!session()->has('isLogged')) {
+            return redirect()->to('login'); // Redirect to login if not authenticated
+        }
+    
         $data['title'] = "About Us";
-
+    
+        // Determine the navbar to include based on the user's role
+        $role = session()->get('role');
+        $navbar = '';
+    
+        switch ($role) {
+            case 'itso':
+                $navbar = 'include\navbar_itso';
+                break;
+            case 'associate':
+                $navbar = 'include\navbar_associate';
+                break;
+            case 'student':
+                $navbar = 'include\navbar_students';
+                break;
+            default:
+                return redirect()->to('logout'); // Redirect if the role is invalid
+        }
+    
+        // Render the About page with the appropriate navbar
         return view('include\header', $data)
-            .view('about_view')
-            .view('include\footer');
+            . view($navbar)
+            . view('about_view')
+            . view('include\footer');
     }
 }
+
+
+
 
 
 ?>

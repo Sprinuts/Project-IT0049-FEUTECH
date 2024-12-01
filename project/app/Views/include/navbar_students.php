@@ -14,13 +14,13 @@
                 <a class="nav-link" aria-current="page" href="<?= base_url('welcomestudent'); ?>">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="">About</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link " href="<?= base_url("borrow")?>">Borrow Equipment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= base_url( "returning")?>">Return Equipment</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " href="<?= base_url(relativePath: 'about'); ?>">About</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

@@ -19,6 +19,7 @@ $routes->get('(?i)welcomestudent', 'Index::welcomestudent'); //welcome page for 
 //about route
 $routes->get('(?i)about', 'Index::about'); //about page
 
+
 //users route
 $routes->get('(?i)users', 'Users::index'); //list of users
 $routes->get('(?i)users/add', 'Users::add'); //add new user direct

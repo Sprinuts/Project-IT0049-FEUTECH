@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="<?= base_url(relativePath: 'welcomestudent'); ?>">
+        <a class="navbar-brand" href="<?= base_url(relativePath: 'welcomeassociate'); ?>">
             <img src="<?= base_url("public/style/feutech.png") ?>" alt="home" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,10 +11,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
+<<<<<<< Updated upstream
                     <a class="nav-link " aria-current="page" href="<?= base_url("public/style/feutech.png") ?>">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="">About</a> <!-- wait lang -->
+=======
+                <a class="nav-link " aria-current="page" href="<?= base_url('welcomeassociate'); ?>">Home</a>
+>>>>>>> Stashed changes
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= base_url("borrow")?>">Borrow Equipment</a>
@@ -24,6 +28,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= base_url("reserve")?>">Reserve Equipment</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link " href="<?= base_url(relativePath: 'about'); ?>">About</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">

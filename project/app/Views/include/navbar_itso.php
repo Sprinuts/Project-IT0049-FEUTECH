@@ -13,9 +13,6 @@
                 <li class="nav-item">
                     <a class="nav-link " aria-current="page" href="<?= base_url('welcomeitso'); ?>">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="<?= base_url(relativePath: 'about'); ?>">About</a>
-                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Managing
@@ -24,6 +21,9 @@
                         <li><a class="dropdown-item" href="<?= base_url(relativePath: 'users'); ?>">Users</a></li>
                         <li><a class="dropdown-item" href="<?= base_url(relativePath: 'equipments'); ?>">Equipments</a></li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="<?= base_url(relativePath: 'about'); ?>">About</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
