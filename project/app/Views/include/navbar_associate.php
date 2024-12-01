@@ -17,7 +17,7 @@
                     <a class="nav-link " href="<?= base_url("borrow")?>">Borrow Equipment</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="">Return Equipment</a>
+                    <a class="nav-link " href="<?= base_url("returning")?>">Return Equipment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= base_url("reserve")?>">Reserve Equipment</a>
