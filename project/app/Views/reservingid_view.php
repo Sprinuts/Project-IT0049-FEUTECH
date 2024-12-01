@@ -1,4 +1,6 @@
 <div class="d-flex align-items-center justify-content-center">
+<link rel="stylesheet" href="<?= base_url('public/style/users_cs.css') ?>">
+
         <form action="<?= base_url('reserve/reserving/id/'.esc($id)); ?>" method="post" class="adjust">
             <div class="form-group mb-3">
                 <label for="datetoborrow" class="form-label" style="font-weight: bold; font-size: 16px;">Date to Reserve</label>
