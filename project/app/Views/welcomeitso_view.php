@@ -12,12 +12,12 @@
     <section class="overview">
         <h2><i class="fa-solid fa-layer-group"></i> About ITSO Services </h2>
         <p>The ITSO platform provides a range of services to FEU Tech's students and staff. From access to educational software, technical support, to network and equipment management, ITSO is here to ensure a smooth academic and operational experience for everyone.</p>
-        <img src="<?= base_url('public/images/itso-services.jpg') ?>" alt="IT Services and Operations" class="service-image">
+        <img src="<?= base_url('public/style/assets/Services.webp') ?>" alt="IT Services and Operations" class="service-image">
     </section>
 
     <!-- Available Services Section -->
     <section class="available-services">
-        <h2><i class="fa-solid fa-user-gear"></i> Available IT Services</h2>
+        <h2 style= "margin-top: 50px"><i class="fa-solid fa-user-gear"></i> Available IT Services</h2>
         <p>Here is a list of services provided by ITSO:</p>
         <ul>
             <li>Software Access (Microsoft Office, AutoCAD, etc.)</li>
