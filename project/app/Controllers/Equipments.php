@@ -36,7 +36,7 @@ class Equipments extends BaseController{
         } else {
             return redirect()->to('login');
         }
-        
+
         helper('form');
 
         if($this->request->is('POST')){
@@ -103,6 +103,13 @@ class Equipments extends BaseController{
     }
 
     public function edit($id = 0){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'itso'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
         helper('form');
 
         $equipmentsmodel = model('Equipments_model');
@@ -166,6 +173,13 @@ class Equipments extends BaseController{
     }
 
     public function view($id = 0){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'itso'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
         $equipmentsmodel = model('Equipments_model');
 
         $data['title'] = "Equipment Information";
@@ -179,6 +193,13 @@ class Equipments extends BaseController{
     }
 
     public function delete($id = 0){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'itso'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
         $equipmentmodel = model('Equipments_model');
         $equipmentmodel->delete($id);
