@@ -1,0 +1,21 @@
+Group name: FORKNIK
+
+Group member:
+Leader: Malvin Jaybert C. Gao
+Member: Lance Aaron B. Sansaet
+Member: Josh Abraham A. Valerio
+Member: Ivan Baranda
+
+Sample Login Credentials:
+
+ITSO login
+Username: 202400001
+Password: itsogao1
+
+Associate login
+Username: 202400014
+Password: 2000-12-12
+
+Student login
+Username: 202400017
+Password: 2000-07-07
