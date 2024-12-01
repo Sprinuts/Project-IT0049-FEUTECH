@@ -9,7 +9,9 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-image"></i></span> <!-- Image Icon -->
                     </div>
-                    <img src="<?= base_url($equipment['image']); ?>" alt="Equipment Image" class="img-fluid">
+                    <div class="image-container">
+                        <img src="<?= base_url($equipment['image']); ?>" alt="Equipment Image" class="img-fluid">
+                    </div>
                 </div>
             </div>
             <div class="form-group mb-2">
