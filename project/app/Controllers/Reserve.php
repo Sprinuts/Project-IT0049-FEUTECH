@@ -6,6 +6,13 @@ namespace App\Controllers;
 class Reserve extends BaseController{
 
     public function index(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
         $data['title'] = "Reserve Equipment";
 
@@ -16,6 +23,13 @@ class Reserve extends BaseController{
     }
 
     public function reserving(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
             
         $equipmentsmodel = model('Equipments_model');
 
@@ -30,6 +44,13 @@ class Reserve extends BaseController{
     }
 
     public function reservingcategory($category){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
         $equipmentsmodel = model('Equipments_model');
 
@@ -54,37 +75,20 @@ class Reserve extends BaseController{
     }
 
     public function reservingid($id){
-        $equipmentsmodel = model('Equipments_model');
-        // $usersmodel = model('Users_model');
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
-        // $equipment = $equipmentsmodel->find($id);
+        $equipmentsmodel = model('Equipments_model');
 
 
         if($this->request->is('POST')){
             $username = session()->get('username');
             $dateborrowed = $this->request->getPost('datetoborrow');
-
-            // $rules = [
-            //     'datetoborrowed' => 'required'
-            // ];
-
-            // $messages = [
-            //     'datetoborrowed' => [
-            //         'required' => 'Date Borrowed is required.'
-            //     ]
-            // ];
-
-            // if(!$this->validateData($dateborrowed ,$rules, $messages)){
-            //     //reload the page with errors
-
-            //     $data['title'] = "Add User";
-
-            //     return view('include\header_itso', $data)
-            //         .view('include\navbar_itso')
-            //         .view('users_add')
-            //         .view('include\footer_itso');
-
-            // }
 
             $datereserved = date('Y-m-d');
 
@@ -109,6 +113,14 @@ class Reserve extends BaseController{
     }
 
     public function reservation(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
+
         $equipmentsmodel = model('Equipments_model');
 
         $username = session()->get('username');
@@ -128,10 +140,15 @@ class Reserve extends BaseController{
     }
 
     public function cancel($id){
-        $equipmentsmodel = model('Equipments_model');
-        // $usersmodel = model('Users_model');
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
-        // $equipment = $equipmentsmodel->find($id);
+        $equipmentsmodel = model('Equipments_model');
 
         $equipmentsmodel->update($id, [
             'reserver' => null,
@@ -143,10 +160,15 @@ class Reserve extends BaseController{
     }
 
     public function reschedule($id){
-        $equipmentsmodel = model('Equipments_model');
-        // $usersmodel = model('Users_model');
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
-        // $equipment = $equipmentsmodel->find($id);
+        $equipmentsmodel = model('Equipments_model');
 
         if($this->request->is('POST')){
             $dateborrowed = $this->request->getPost('datetoborrow');

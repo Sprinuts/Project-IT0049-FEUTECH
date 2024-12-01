@@ -4,7 +4,15 @@ namespace App\Controllers;
 
 class Reports extends BaseController{
 
-    public function index(){ 
+    public function index(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'itso'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
+
         $reportsmodel = model('Reports_model');
 
         // $data['reports'] = $reportsmodel->get()->getResult();

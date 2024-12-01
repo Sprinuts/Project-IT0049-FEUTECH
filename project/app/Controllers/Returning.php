@@ -5,6 +5,13 @@ namespace App\Controllers;
 class Returning extends BaseController{
 
     public function index(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
         $equipmentsmodel = model('Equipments_model');
 
@@ -34,6 +41,13 @@ class Returning extends BaseController{
     }
 
     public function returning($id){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
         $equipmentsmodel = model('Equipments_model');
         $usersmodel = model('Users_model');

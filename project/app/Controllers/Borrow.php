@@ -4,6 +4,13 @@ namespace App\Controllers;
 
 class Borrow extends BaseController{
     public function index(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
         
         $equipmentsmodel = model('Equipments_model');
 
@@ -26,6 +33,13 @@ class Borrow extends BaseController{
     }
 
     public function borrowing($category){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
 
         $equipmentsmodel = model('Equipments_model');
 
@@ -54,13 +68,17 @@ class Borrow extends BaseController{
                 .view('borrowing_view', $data)
                 .view('include\footer');
         }
-        // return view('include\header', $data) //change this to associate or student depending on the condition on the session
-        //     .view('include\navbar')
-        //     .view('borrowing_view', $data)
-        //     .view('include\footer');
     }
 
     public function borrow($id){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
+
         $equipmentsmodel = model('Equipments_model');
         $usersmodel = model('Users_model');
         $reportsmodel = model('Reports_model');
