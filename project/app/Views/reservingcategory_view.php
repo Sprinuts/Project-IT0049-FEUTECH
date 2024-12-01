@@ -1,7 +1,8 @@
 <head>
+<link rel="stylesheet" href="<?= base_url('public/style/users_cs.css') ?>">
 </head>
 <div>
-    <h3 class="text-center">List of Return</h3>
+    <h3 class="text-center">List of Available Equipment</h3>
     <div class="adjust">
         <table class="adjustBtn table table-striped table-hover table-light table-bordered table-responsive">
             <thead>
@@ -35,7 +36,7 @@
 
                     <td>
 
-                        <a href="<?= base_url('return/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Return</a> 
+                        <a href="<?= base_url('reserve/reserving/category'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Reserve</a> 
                     </td>
                 </tr>
                 <?php endforeach; ?>
