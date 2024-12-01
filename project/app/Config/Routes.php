@@ -58,3 +58,7 @@ $routes->get('(?i)borrowing/(:any)', 'Borrow::borrowing/$1'); //borrow equipment
 $routes->get('(?i)returning', 'Returning::index'); //return equipment
 $routes->get('(?i)returning/(:num)', 'Returning::returning/$1'); //return equipment by id
 
+//reserve route
+$routes->get('(?i)reserve', 'Reserve::index'); //reserve equipment
+$routes->get('(?i)reserve/reserving', 'Reserve::reserving'); //reserve equipment by category
+$routes->get('(?i)reserve/reserving/(:any)', 'Reserve::reservingcategory/$1'); //reserve equipment by category

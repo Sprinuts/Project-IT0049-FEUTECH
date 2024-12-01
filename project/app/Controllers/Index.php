@@ -16,7 +16,7 @@ class Index extends BaseController{
             return redirect()->to('login');
         }
 
-        echo "hello gawin mo na project";
+        echo "You are not suppossed to access this page.";
 
         $data['title'] = "Welcome to Forknik University";
 
