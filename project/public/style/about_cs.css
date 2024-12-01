@@ -15,10 +15,9 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     background: linear-gradient(to right, #e2f7e2, #f5f9f5);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -36,7 +35,7 @@ h1 {
     background-color: #f3f3f3;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .member img {
@@ -49,8 +48,9 @@ h1 {
 .member h2 {
     font-size: 20px;
     margin: 20px 0;
+    font-weight: bolder;
     color: #333;
-    padding-top: 10px;
+    padding-top: 20px;
     border-top: 4px solid #4CAF50; /* Green border under the header */
     border-radius: 3px;
 }
