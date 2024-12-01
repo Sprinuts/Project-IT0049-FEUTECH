@@ -14,10 +14,7 @@
     <?php endforeach; ?>
 </div>
 
-<?= $pager->links(); ?>
-=======
     <div class="pagination">
         <?= $pager->links(); ?>
     </div>
 </div>
->>>>>>> Stashed changes
