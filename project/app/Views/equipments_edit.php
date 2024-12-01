@@ -49,7 +49,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-cogs"></i></span> <!-- Icon for Accessories -->
                     </div>
-                    <select name="accessories" id="accessories" class="form-control" disabled>
+                    <select name="accessories" id="accessories" class="form-control" >
                         <optgroup>
                             <option value="" disabled selected>Select Accessories</option>
                             <option value="none" <?= set_value('accessories') == 'none' ? 'selected' : '' ?>>None</option>

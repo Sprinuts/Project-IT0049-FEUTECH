@@ -27,6 +27,10 @@
             <li>Wi-Fi Network Setup and Troubleshooting</li>
         </ul>
         <p>To request any of the services listed above, simply click the button below and submit your request through the ITSO platform.</p>
+<<<<<<< Updated upstream
+=======
+        <a href="<?= base_url('') ?>" class="btn-request">Request ITSO Services</a>
+>>>>>>> Stashed changes
         </section>
 
         <!-- Request Process Section -->
