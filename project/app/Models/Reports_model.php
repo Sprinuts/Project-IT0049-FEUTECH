@@ -16,6 +16,8 @@ class Reports_model extends Model{
         'username',
         'type',
         'equipmentid',
+        'equipmentname',
+        'category',
     ];
 
 
