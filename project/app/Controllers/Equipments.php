@@ -4,6 +4,13 @@ namespace App\Controllers;
 
 class Equipments extends BaseController{
     public function index(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'itso'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
         
         $equipmentsmodel = model('Equipments_model');
 
@@ -22,6 +29,14 @@ class Equipments extends BaseController{
     }
 
     public function add(){
+        if(session()->has('isLogged')){
+            if(session()->get('role') != 'itso'){
+                return redirect()->to('logout');
+            }
+        } else {
+            return redirect()->to('login');
+        }
+        
         helper('form');
 
         if($this->request->is('POST')){
