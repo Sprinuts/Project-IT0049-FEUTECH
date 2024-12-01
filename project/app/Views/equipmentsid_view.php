@@ -4,6 +4,15 @@
     <div class="col col-md-7">
         <form action="" method="post" class="adjust">
             <div class="form-group mb-2">
+                <label for="image" class="form-label">Image</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-image"></i></span> <!-- Image Icon -->
+                    </div>
+                    <img src="<?= base_url($equipment['image']); ?>" alt="Equipment Image" class="img-fluid">
+                </div>
+            </div>
+            <div class="form-group mb-2">
                 <label for="id" class="form-label">ID</label>
                 <div class="input-group">
                     <div class="input-group-prepend">

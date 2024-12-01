@@ -43,12 +43,25 @@ class Equipments extends BaseController{
 
             $equipmentsmodel = model('Equipments_model');
 
+            $imageinfo = $this->request->getFile('image');
+
+            if(!empty($imageinfo)){
+                $newName = $imageinfo->getRandomName();
+
+                $imagepath = 'public/images/' . $newName;
+                
+                $imageinfo->move('public/images', $newName);
+
+            }
+
             $registerdata = $this->request->getPost([
                 'equipmentname',
                 'category',
                 'accessories',
                 'description',
             ]);
+
+            $registerdata['image'] = $imagepath;
 
             $rules = [
                 'equipmentname' => 'required',
@@ -181,6 +194,8 @@ class Equipments extends BaseController{
             return redirect()->to('login');
         }
         $equipmentsmodel = model('Equipments_model');
+
+        
 
         $data['title'] = "Equipment Information";
 

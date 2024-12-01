@@ -7,7 +7,7 @@
                 <p><?= validation_list_errors(); ?></p>
             </div>
         <?php endif ?>
-        <form action="<?= base_url('equipments/add'); ?>" method="post" class="adjust">
+        <form action="<?= base_url('equipments/add'); ?>" enctype="multipart/form-data"method="post" class="adjust">
             <!-- Equipment Name -->
             <div class="form-group mb-2">
                 <label for="equipmentname" class="form-label">Equipment Name</label>
@@ -52,6 +52,12 @@
             <div class="form-group mb-2">
                 <label for="description" class="form-label">Description</label>
                 <textarea name="description" id="description" class="form-control" rows="3"><?= set_value('description') ?></textarea>
+            </div>
+
+            <!-- Image Upload -->
+            <div class="form-group mb-2">
+                <label for="image" class="form-label">Upload Image</label>
+                <input type="file" name="image" id="image" class="form-control">
             </div>
 
             <!-- Buttons -->
