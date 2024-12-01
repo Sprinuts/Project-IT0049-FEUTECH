@@ -119,14 +119,22 @@ header h1 {
 }
 
 .equipment-image {
-    max-width: 80%;
+    max-width: 95%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
+.equipment-image {
+    filter: grayscale(0); /* No grayscale by default */
+    transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
+.equipment-image:hover {
+    filter: grayscale(50%); /* Apply grayscale on hover */
+    transform: scale(1.05); /* Scale the image on hover */
+}
 .equipment-image:hover {
     transform: scale(1.05); /* Scale the image on hover */
 }
@@ -137,7 +145,7 @@ header h1 {
     padding: 50px;
     border-radius: 5px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 .available-items h2 {

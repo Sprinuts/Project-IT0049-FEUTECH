@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?= base_url('public/style/welcomestudent_cs.css') ?>">
-<script src="<?= base_url('public/js/welcomestudents_js.js') ?>" type="text/javascript"></script>
+<script src="<?= base_url('public/js/welcomestudent_js.js') ?>" type="text/javascript"></script>
 
 <header>
     <h1>Welcome Students</h1>
@@ -12,7 +12,7 @@
     <section class="overview">
         <h2>About the Borrow Equipment System</h2>
         <p>The Borrow Equipment System allows students to easily borrow the tools and equipment they need for academic purposes. Whether it's laptops, projectors, or lab equipment, you can check availability, borrow items, and even track the return dates here!</p>
-        <img src="<?= base_url('public/images/borrow-equipment.jpg') ?>" alt="Borrow Equipment" class="equipment-image">
+        <img src="<?= base_url('public/style/assets/equip.jpg') ?>" alt="Borrow Equipment" class="equipment-image">
     </section>
 
     <!-- Available Items Section -->
