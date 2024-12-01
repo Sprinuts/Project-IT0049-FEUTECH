@@ -35,8 +35,7 @@
                     <td><?= $equipment['description']; ?></td>
 
                     <td>
-
-                        <a href="<?= base_url('reserve/reserving/category'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Reserve</a> 
+                        <a href="<?= base_url('reserve/reserving/id/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Reserve</a> 
                     </td>
                 </tr>
                 <?php endforeach; ?>

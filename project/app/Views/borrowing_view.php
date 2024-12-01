@@ -35,7 +35,6 @@
                     <td><?= $equipment['description']; ?></td>
 
                     <td>
-
                         <a href="<?= base_url('borrowing/borrow/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Borrow</a> 
                     </td>
                 </tr>

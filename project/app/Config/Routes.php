@@ -62,4 +62,6 @@ $routes->get('(?i)returning/(:num)', 'Returning::returning/$1'); //return equipm
 //reserve route
 $routes->get('(?i)reserve', 'Reserve::index'); //reserve equipment
 $routes->get('(?i)reserve/reserving', 'Reserve::reserving'); //reserve equipment by category
-$routes->get('(?i)reserve/reserving/(:any)', 'Reserve::reservingcategory/$1'); //reserve equipment by category
+$routes->get('(?i)reserve/reserving/id/(:num)', 'Reserve::reservingid/$1'); //reserve equipment by category and page
+$routes->post('(?i)reserve/reserving/id/(:num)', 'Reserve::reservingid/$1'); //reserve equipment by category and page by post
+$routes->get('(?i)reserve/reserving/(:any)', 'Reserve::reservingcategory/$1'); //reserve equipment by 

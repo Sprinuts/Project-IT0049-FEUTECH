@@ -21,6 +21,7 @@ class Equipments_model extends Model{
         'accessories',
         'dateborrowed', 
         'datereserved',
+        'datetoborrow',
         'status',
         'category',
         'description',
