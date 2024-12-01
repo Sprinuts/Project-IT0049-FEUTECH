@@ -13,12 +13,7 @@
         <?php endforeach; ?>
     </div>
 
-<<<<<<< Updated upstream
-
-<?= $pager->links(); ?>
-=======
     <div class="pagination">
         <?= $pager->links(); ?>
     </div>
 </div>
->>>>>>> Stashed changes
