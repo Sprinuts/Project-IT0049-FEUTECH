@@ -12,6 +12,7 @@
                     <th>Status</th> <!-- remove later -->
                     <th>Description</th>
                     <th>Actions</th>
+                    <th>Reservation Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,6 +33,7 @@
                         ?>
                     </td> <!-- remove later -->
                     <td><?= $equipment['description']; ?></td>
+                    <td><?= date('m-d-Y', strtotime($equipment['datetoborrow'])); ?></td>
 
                     <td>
 

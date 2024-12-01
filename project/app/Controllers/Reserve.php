@@ -109,7 +109,17 @@ class Reserve extends BaseController{
     }
 
     public function reservation(){
-        $data['title'] = "Welcome to Forknik University";
+        $equipmentsmodel = model('Equipments_model');
+
+        $username = session()->get('username');
+
+        $data['equipments'] = $equipmentsmodel
+            ->where('reserver', $username)
+            ->paginate(2);
+
+        $data['pager'] = $equipmentsmodel->pager;
+
+        $data['title'] = "View Reservation";
 
         return view('include\header', $data)
             .view('include\navbar_associate')
@@ -130,6 +140,32 @@ class Reserve extends BaseController{
         ]);
 
         return redirect()->to('reserve');
+    }
+
+    public function reschedule($id){
+        $equipmentsmodel = model('Equipments_model');
+        // $usersmodel = model('Users_model');
+
+        // $equipment = $equipmentsmodel->find($id);
+
+        if($this->request->is('POST')){
+            $dateborrowed = $this->request->getPost('datetoborrow');
+
+            $equipmentsmodel->update($id, [
+                'datetoborrow' => $dateborrowed
+            ]);
+
+            return redirect()->to('reserve');
+        }
+
+        $data['id'] = $id;
+
+        $data['title'] = "Reserve Equipment";
+
+        return view('include\header', $data)
+            .view('include\navbar_associate')
+            .view('reservationresched_view', $data)
+            .view('include\footer');
     }
 }
 

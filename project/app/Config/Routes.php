@@ -65,3 +65,9 @@ $routes->get('(?i)reserve/reserving', 'Reserve::reserving'); //reserve equipment
 $routes->get('(?i)reserve/reserving/id/(:num)', 'Reserve::reservingid/$1'); //reserve equipment by category and page
 $routes->post('(?i)reserve/reserving/id/(:num)', 'Reserve::reservingid/$1'); //reserve equipment by category and page by post
 $routes->get('(?i)reserve/reserving/(:any)', 'Reserve::reservingcategory/$1'); //reserve equipment by 
+
+//reservation route
+$routes->get('(?i)reservation', 'Reserve::reservation'); 
+$routes->get('(?i)reservation/cancel/(:num)', 'Reserve::cancel/$1'); 
+$routes->get('(?i)reservation/resched/(:num)', 'Reserve::reschedule/$1'); 
+$routes->post('(?i)reservation/resched/(:num)', 'Reserve::reschedule/$1');
