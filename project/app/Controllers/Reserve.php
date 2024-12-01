@@ -108,7 +108,20 @@ class Reserve extends BaseController{
             .view('include\footer');
     }
 
-    public function 
+    public function cancel($id){
+        $equipmentsmodel = model('Equipments_model');
+        // $usersmodel = model('Users_model');
+
+        // $equipment = $equipmentsmodel->find($id);
+
+        $equipmentsmodel->update($id, [
+            'reserver' => null,
+            'datereserved' => null,
+            'datetoborrow' => null
+        ]);
+
+        return redirect()->to('reserve');
+    }
 }
 
 
