@@ -19,24 +19,24 @@
 </p>
 
         <div class="member">
-            <img src="path/to/image1.jpg" alt="Member 1">
+            <img src="<?= base_url('public/style/assets/Jaybe.jpg') ?>" alt="Member ">
             <h2>Jaybert Gao</h2>
-            <p>Short bio about member 1.</p>
+        
         </div>
         <div class="member">
-            <img src="path/to/image2.jpg" alt="Member 2">
+        <img src="<?= base_url('public/style/assets/AAron.jpg') ?>" alt="Member ">
             <h2>Aaron Sansaet</h2>
-            <p>Short bio about member 2.</p>
+        
         </div>
         <div class="member">
-            <img src="path/to/image3.jpg" alt="Member 3">
+        <img src="<?= base_url('public/style/assets/Me.jpg') ?>" alt="Member ">
             <h2>Ivan Baranda</h2>
-            <p>Short bio about member 3.</p>
+            
         </div>
         <div class="member">
-            <img src="path/to/image4.jpg" alt="Member 4">
+        <img src="<?= base_url('public/style/assets/Josh.jpg') ?>" alt="Member ">
             <h2>Josh Valerio</h2>
-            <p>Short bio about member 4.</p>
+            
         </div>
     </div>
 </body>
