@@ -1,4 +1,6 @@
 <head>
+    <link rel="stylesheet" href="<?= base_url('public/style/users_cs.css') ?>">
+
 </head>
 <div>
     <h3 class="text-center">List of Return</h3>
