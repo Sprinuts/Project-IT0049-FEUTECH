@@ -12,12 +12,12 @@
     <section class="overview">
         <h2><i class="fa-solid fa-layer-group"></i> About Associate Services</h2>
         <p>The Associate Services platform is designed to support associates in their academic, operational, and professional development goals. Access resources, request assistance, and collaborate with peers seamlessly through this system.</p>
-        <img src="<?= base_url('public/images/associate-services.jpg') ?>" alt="Associate Services" class="service-image">
+        <img src="<?= base_url('public/style/assets/associate.jpg') ?>" alt="Associate Services" class="service-image">
     </section>
 
     <!-- Available Services Section -->
     <section class="available-services">
-        <h2><i class="fa-solid fa-handshake"></i> Available Associate Services</h2>
+        <h2 style="margin-top: 40px;"><i class="fa-solid fa-handshake"></i> Available Associate Services</h2>
         <p>Here is a list of services provided for associates:</p>
         <ul>
             <li>Professional Development Workshops</li>
