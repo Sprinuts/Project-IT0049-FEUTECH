@@ -7,7 +7,7 @@ class Reserve extends BaseController{
 
     public function index(){
 
-        $data['title'] = "Welcome to Forknik University";
+        $data['title'] = "Reserve Equipment";
 
         return view('include\header', $data)
             .view('include\navbar_associate')
@@ -105,6 +105,15 @@ class Reserve extends BaseController{
         return view('include\header', $data)
             .view('include\navbar_associate')
             .view('reservingid_view', $data)
+            .view('include\footer');
+    }
+
+    public function reservation(){
+        $data['title'] = "Welcome to Forknik University";
+
+        return view('include\header', $data)
+            .view('include\navbar_associate')
+            .view('reservation_view')
             .view('include\footer');
     }
 
