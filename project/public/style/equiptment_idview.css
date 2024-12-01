@@ -32,6 +32,28 @@ body {
     z-index: -1; /* Keeps it in the background */
 }
 
+/* Image Container Styles */
+.image-container {
+    display: flex;
+    justify-content: center;  /* Centers the image horizontally */
+    align-items: center;      /* Centers the image vertically */
+    margin-bottom: 1rem;
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    overflow: hidden; /* Prevents the image from overflowing its container */
+    border-radius: 8px; /* Optional: Adds rounded corners to the container */
+    margin-left: auto; /* Centers the container horizontally */
+    margin-right: auto; /* Centers the container horizontally */
+}
+
+
+/* Image Styling */
+.image-container img {
+    width: 100%; /* Makes the image fill the container */
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover; /* Maintains aspect ratio while covering the area */
+}
+
 /* Form Container Styles */
 .col-md-7 {
     background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent background for the form */
