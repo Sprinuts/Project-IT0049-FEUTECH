@@ -11,14 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-<<<<<<< Updated upstream
-                    <a class="nav-link " aria-current="page" href="<?= base_url("public/style/feutech.png") ?>">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="">About</a> <!-- wait lang -->
-=======
                 <a class="nav-link " aria-current="page" href="<?= base_url('welcomeassociate'); ?>">Home</a>
->>>>>>> Stashed changes
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="<?= base_url("borrow")?>">Borrow Equipment</a>
