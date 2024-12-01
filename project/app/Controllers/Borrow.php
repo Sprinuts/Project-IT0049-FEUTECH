@@ -5,9 +5,6 @@ namespace App\Controllers;
 class Borrow extends BaseController{
     public function index(){
         if(session()->has('isLogged')){
-            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
-                return redirect()->to('logout');
-            }
         } else {
             return redirect()->to('login');
         }
@@ -34,9 +31,6 @@ class Borrow extends BaseController{
 
     public function borrowing($category){
         if(session()->has('isLogged')){
-            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
-                return redirect()->to('logout');
-            }
         } else {
             return redirect()->to('login');
         }
@@ -72,9 +66,6 @@ class Borrow extends BaseController{
 
     public function borrow($id){
         if(session()->has('isLogged')){
-            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
-                return redirect()->to('logout');
-            }
         } else {
             return redirect()->to('login');
         }

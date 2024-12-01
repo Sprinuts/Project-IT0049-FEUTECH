@@ -6,9 +6,6 @@ class Returning extends BaseController{
 
     public function index(){
         if(session()->has('isLogged')){
-            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
-                return redirect()->to('logout');
-            }
         } else {
             return redirect()->to('login');
         }
@@ -42,9 +39,6 @@ class Returning extends BaseController{
 
     public function returning($id){
         if(session()->has('isLogged')){
-            if(session()->get('role') != 'students' || session()->get('role') != 'associate'){
-                return redirect()->to('logout');
-            }
         } else {
             return redirect()->to('login');
         }
