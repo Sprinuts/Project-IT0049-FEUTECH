@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class Reports_model extends Model{
 
-    protected $table = 'items';
+    protected $table = 'reports';
 
     protected $primaryKey = 'id';
 
@@ -13,9 +13,9 @@ class Reports_model extends Model{
 
     protected $allowedFields = [
         'id',
+        'username',
         'type',
         'equipmentid',
-        'username',
     ];
 
 
