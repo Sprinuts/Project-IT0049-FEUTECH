@@ -107,6 +107,8 @@ class Reserve extends BaseController{
             .view('reservingid_view', $data)
             .view('include\footer');
     }
+
+    public function 
 }
 
 

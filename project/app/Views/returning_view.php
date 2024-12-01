@@ -34,7 +34,6 @@
                     <td><?= $equipment['description']; ?></td>
 
                     <td>
-
                         <a href="<?= base_url('return/'.$equipment['id']); ?>" class="btn btn-sm btn-warning">Return</a> 
                     </td>
                 </tr>
