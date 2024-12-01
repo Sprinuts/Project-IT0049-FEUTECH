@@ -1,4 +1,7 @@
+<link rel="stylesheet" href="<?= base_url('public/style/users_cs.css') ?>">
+
 <div class="d-flex align-items-center justify-content-center">
+    
         <form action="<?= base_url('reservation/resched/' .esc($id)); ?>" method="post" class="adjust">
             <div class="form-group mb-3">
                 <label for="datetoborrow" class="form-label" style="font-weight: bold; font-size: 16px;">Date to Reserve</label>

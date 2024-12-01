@@ -10,7 +10,6 @@
 
     <!-- Include the navbar at the top -->
 
-
     <!-- Main content container -->
     <div class="about-container">
         <h1>ABOUT US</h1>
@@ -26,20 +25,28 @@
         <div class="team">
             <div class="member">
                 <img src="<?= base_url('public/style/assets/Jaybe.jpg') ?>" alt="Jaybert Gao">
-                <h2>Jaybert Gao</h2>
+                <h2>Malvin Jaybert Gao</h2>
+                <h5>Lead Programmer</h5>
+                <p>Responsible for designing and implementing the core functionalities of the website, ensuring a robust and efficient system that meets the needs of the IT Services Office (ITSO).</p>
             </div>
             <div class="member">
                 <img src="<?= base_url('public/style/assets/AAron.jpg') ?>" alt="Aaron Sansaet">
-                <h2>Aaron Sansaet</h2>
-            </div>
+                <h2>Lance Aaron Sansaet</h2>
+                <h5>Front End Developer</h5>
+                <p>As a Front-End Developer, Aaron ensures the website's design is visually appealing and responsive, providing users with an intuitive and engaging experience. </p>
+                </div>
             <div class="member">
                 <img src="<?= base_url('public/style/assets/Me.jpg') ?>" alt="Ivan Baranda">
                 <h2>Ivan Baranda</h2>
+                <h5>Front End Assistant</h5>
+                <p>As the Front-End Assistant, Ivan supports the development and implementation of the website's user interface by handling minor adjustments and ensuring the website's consistency.</p>
             </div>
             <div class="member">
                 <img src="<?= base_url('public/style/assets/Josh.jpg') ?>" alt="Josh Valerio">
-                <h2>Josh Valerio</h2>
-            </div>
+                <h2>Josh Abraham Valerio</h2>
+                <h5>Quality Assurace</h5>
+                <p>As the Quality Assurance, Josh ensures the website is functional, reliable, and accesssible by identifying issues and collaborating with the team to deliver a seamless experience.</p>
+                </div>
         </div>
     </div>
 
