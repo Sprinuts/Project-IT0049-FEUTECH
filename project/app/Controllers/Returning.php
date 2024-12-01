@@ -67,6 +67,8 @@ class Returning extends BaseController{
             'username' => $username,
             'equipmentid' => $equipment['equipmentid'],
             'type' => 'Returned',
+            'equipmentname' => $equipment['equipmentname'],
+            'category' => $equipment['category'],
         ]);
 
         return redirect()->to('returning');

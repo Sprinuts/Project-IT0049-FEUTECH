@@ -71,3 +71,6 @@ $routes->get('(?i)reservation', 'Reserve::reservation');
 $routes->get('(?i)reservation/cancel/(:num)', 'Reserve::cancel/$1'); 
 $routes->get('(?i)reservation/resched/(:num)', 'Reserve::reschedule/$1'); 
 $routes->post('(?i)reservation/resched/(:num)', 'Reserve::reschedule/$1');
+
+//reports route
+$routes->get('(?i)reports', 'Reports::index');

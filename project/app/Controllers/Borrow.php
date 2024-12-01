@@ -92,6 +92,8 @@ class Borrow extends BaseController{
             'username' => $username,
             'equipmentid' => $equipment['equipmentid'],
             'type' => 'Borrowed',
+            'equipmentname' => $equipment['equipmentname'],
+            'category' => $equipment['category'],
         ]);
 
         return redirect()->to('/borrow');

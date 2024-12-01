@@ -8,7 +8,7 @@ class Reports extends BaseController{
         $reportsmodel = model('Reports_model');
 
         // $data['reports'] = $reportsmodel->get()->getResult();
-        $data['users'] = $reportsmodel->paginate(10);
+        $data['reports'] = $reportsmodel->paginate(10);
         $data['pager'] = $reportsmodel->pager;
 
         $data['title'] = "Reports";
